@@ -1,0 +1,4200 @@
+{
+  "updated_at": "2026-05",
+  "stores": [
+    {
+      "id": "mingquan",
+      "name": "民權店",
+      "monthly": [
+        {
+          "month": 1,
+          "income": 1584847,
+          "expense": 1579296,
+          "profit": 5551
+        },
+        {
+          "month": 2,
+          "income": 1463745,
+          "expense": 1238120,
+          "profit": 225625
+        },
+        {
+          "month": 3,
+          "income": 1366847,
+          "expense": 1435443,
+          "profit": -68596
+        },
+        {
+          "month": 4,
+          "income": 978164,
+          "expense": 927040,
+          "profit": 51124
+        },
+        {
+          "month": 5,
+          "income": 813157,
+          "expense": 730777,
+          "profit": 82380
+        }
+      ],
+      "employees": [
+        {
+          "name": "莊琇惠(Sonia)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 213655
+            },
+            {
+              "month": 1,
+              "amount": 303420
+            },
+            {
+              "month": 2,
+              "amount": 289108
+            },
+            {
+              "month": 3,
+              "amount": 224420
+            },
+            {
+              "month": 4,
+              "amount": 220095
+            },
+            {
+              "month": 5,
+              "amount": 210000
+            }
+          ]
+        },
+        {
+          "name": "王郁婷(Rita)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 76053
+            },
+            {
+              "month": 1,
+              "amount": 102800
+            },
+            {
+              "month": 2,
+              "amount": 92620
+            }
+          ]
+        },
+        {
+          "name": "蕭羿种(羽田)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 168040
+            },
+            {
+              "month": 1,
+              "amount": 209190
+            },
+            {
+              "month": 2,
+              "amount": 174067
+            },
+            {
+              "month": 3,
+              "amount": 173250
+            },
+            {
+              "month": 4,
+              "amount": 164430
+            },
+            {
+              "month": 5,
+              "amount": 188225
+            }
+          ]
+        },
+        {
+          "name": "林彥薰(Johnny)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 90140
+            },
+            {
+              "month": 1,
+              "amount": 127526
+            },
+            {
+              "month": 2,
+              "amount": 138846
+            },
+            {
+              "month": 3,
+              "amount": 94680
+            },
+            {
+              "month": 4,
+              "amount": 100224
+            },
+            {
+              "month": 5,
+              "amount": 95352
+            }
+          ]
+        },
+        {
+          "name": "蘇薌妤(雷)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 90020
+            },
+            {
+              "month": 1,
+              "amount": 127140
+            },
+            {
+              "month": 2,
+              "amount": 123160
+            },
+            {
+              "month": 3,
+              "amount": 82760
+            },
+            {
+              "month": 4,
+              "amount": 52890
+            },
+            {
+              "month": 5,
+              "amount": 77160
+            }
+          ]
+        },
+        {
+          "name": "林雅晴(shabu)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 76910
+            },
+            {
+              "month": 1,
+              "amount": 96468
+            },
+            {
+              "month": 2,
+              "amount": 133056
+            },
+            {
+              "month": 3,
+              "amount": 87250
+            },
+            {
+              "month": 4,
+              "amount": 96715
+            },
+            {
+              "month": 5,
+              "amount": 123487
+            }
+          ]
+        },
+        {
+          "name": "李嘉欣(泰琳)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 3,
+              "amount": 28990
+            },
+            {
+              "month": 4,
+              "amount": 20790
+            },
+            {
+              "month": 5,
+              "amount": 17840
+            }
+          ]
+        },
+        {
+          "name": "賴皓禹(Oscar)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 800
+            },
+            {
+              "month": 1,
+              "amount": 600
+            },
+            {
+              "month": 2,
+              "amount": 400
+            }
+          ]
+        },
+        {
+          "name": "洪美玲(美0)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 3,
+              "amount": 12370
+            },
+            {
+              "month": 4,
+              "amount": 14252
+            },
+            {
+              "month": 5,
+              "amount": 13730
+            }
+          ]
+        },
+        {
+          "name": "陳豊鑫(小呱)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 43060
+            },
+            {
+              "month": 1,
+              "amount": 16300
+            },
+            {
+              "month": 2,
+              "amount": 72090
+            }
+          ]
+        }
+      ],
+      "categories": {
+        "1": {
+          "income_total": 1011680,
+          "expense_total": 1006129,
+          "income": [
+            {
+              "cat": "營業現金收入",
+              "amount": 544872
+            },
+            {
+              "cat": "營業轉帳收入",
+              "amount": 414682
+            },
+            {
+              "cat": "刷卡金入帳",
+              "amount": 50527
+            },
+            {
+              "cat": "其他收入(確實備註收入內容)",
+              "amount": 1230
+            },
+            {
+              "cat": "銀行利息收入",
+              "amount": 369
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 449898,
+              "items": [
+                {
+                  "cat": "設計師薪資",
+                  "amount": 332148
+                },
+                {
+                  "cat": "技術師薪資",
+                  "amount": 62284
+                },
+                {
+                  "cat": "其他駐店支出",
+                  "amount": 16470
+                },
+                {
+                  "cat": "人事成本-勞健保(11月)",
+                  "amount": 13624
+                },
+                {
+                  "cat": "人事成本-勞健保(12月)",
+                  "amount": 13624
+                },
+                {
+                  "cat": "人事成本-勞健保(9.10健保)",
+                  "amount": 7308
+                },
+                {
+                  "cat": "代墊員工支出",
+                  "amount": 4440
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 113521,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 99559
+                },
+                {
+                  "cat": "變動成本-電費",
+                  "amount": 8441
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 4500
+                },
+                {
+                  "cat": "變動成本-水費",
+                  "amount": 1021
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 117031,
+              "items": [
+                {
+                  "cat": "固定成本-品牌管理費",
+                  "amount": 72000
+                },
+                {
+                  "cat": "變動成本-店面租金",
+                  "amount": 32550
+                },
+                {
+                  "cat": "固定成本-中興保全費",
+                  "amount": 5454
+                },
+                {
+                  "cat": "品牌共同行銷費",
+                  "amount": 4930
+                },
+                {
+                  "cat": "固定成本-網路費",
+                  "amount": 2097
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 25579,
+              "items": [
+                {
+                  "cat": "餐飲點心",
+                  "amount": 9483
+                },
+                {
+                  "cat": "設備採購",
+                  "amount": 8140
+                },
+                {
+                  "cat": "日常用品",
+                  "amount": 6766
+                },
+                {
+                  "cat": "修繕費用",
+                  "amount": 900
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 290
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 300100,
+              "items": [
+                {
+                  "cat": "股東分潤",
+                  "amount": 300000
+                },
+                {
+                  "cat": "呆帳支出",
+                  "amount": 100
+                }
+              ]
+            }
+          ]
+        },
+        "2": {
+          "income_total": 1006445,
+          "expense_total": 780820,
+          "income": [
+            {
+              "cat": "營業現金收入",
+              "amount": 541157
+            },
+            {
+              "cat": "營業轉帳收入",
+              "amount": 434979
+            },
+            {
+              "cat": "刷卡金入帳",
+              "amount": 28709
+            },
+            {
+              "cat": "呆帳收入",
+              "amount": 1600
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 544160,
+              "items": [
+                {
+                  "cat": "設計師薪資",
+                  "amount": 468085
+                },
+                {
+                  "cat": "技術師薪資",
+                  "amount": 61244
+                },
+                {
+                  "cat": "人事成本-勞健保",
+                  "amount": 14064
+                },
+                {
+                  "cat": "代墊員工支出",
+                  "amount": 767
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 74132,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 67682
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 6450
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 104550,
+              "items": [
+                {
+                  "cat": "固定成本-品牌管理費",
+                  "amount": 72000
+                },
+                {
+                  "cat": "變動成本-店面租金",
+                  "amount": 32550
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 20200,
+              "items": [
+                {
+                  "cat": "餐飲點心",
+                  "amount": 15839
+                },
+                {
+                  "cat": "日常用品",
+                  "amount": 2341
+                },
+                {
+                  "cat": "設備採購",
+                  "amount": 1810
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 210
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 37778,
+              "items": [
+                {
+                  "cat": "其他支出(確實備註支出內容)",
+                  "amount": 37778
+                }
+              ]
+            }
+          ]
+        },
+        "3": {
+          "income_total": 722758,
+          "expense_total": 791354,
+          "income": [
+            {
+              "cat": "營業現金收入",
+              "amount": 377378
+            },
+            {
+              "cat": "營業轉帳收入",
+              "amount": 305484
+            },
+            {
+              "cat": "刷卡金入帳",
+              "amount": 39896
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 538752,
+              "items": [
+                {
+                  "cat": "設計師薪資",
+                  "amount": 448064
+                },
+                {
+                  "cat": "技術師薪資",
+                  "amount": 86558
+                },
+                {
+                  "cat": "其他駐店支出",
+                  "amount": 2430
+                },
+                {
+                  "cat": "代墊員工支出",
+                  "amount": 1700
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 107335,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 91607
+                },
+                {
+                  "cat": "變動成本-電費",
+                  "amount": 10147
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 4500
+                },
+                {
+                  "cat": "變動成本-水費",
+                  "amount": 1081
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 128872,
+              "items": [
+                {
+                  "cat": "固定成本-品牌管理費",
+                  "amount": 72000
+                },
+                {
+                  "cat": "變動成本-店面租金",
+                  "amount": 32550
+                },
+                {
+                  "cat": "固定成本-中興保全費",
+                  "amount": 15772
+                },
+                {
+                  "cat": "固定成本-營業所得稅",
+                  "amount": 7851
+                },
+                {
+                  "cat": "固定成本-網路費",
+                  "amount": 699
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 15617,
+              "items": [
+                {
+                  "cat": "日常用品",
+                  "amount": 12492
+                },
+                {
+                  "cat": "設備採購",
+                  "amount": 2850
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 275
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 778,
+              "items": [
+                {
+                  "cat": "其他支出(確實備註支出內容)",
+                  "amount": 778
+                }
+              ]
+            }
+          ]
+        },
+        "4": {
+          "income_total": 643564,
+          "expense_total": 592440,
+          "income": [
+            {
+              "cat": "營業現金收入",
+              "amount": 312645
+            },
+            {
+              "cat": "營業轉帳收入",
+              "amount": 304564
+            },
+            {
+              "cat": "刷卡金入帳",
+              "amount": 26255
+            },
+            {
+              "cat": "呆帳收入",
+              "amount": 100
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 395444,
+              "items": [
+                {
+                  "cat": "設計師薪資",
+                  "amount": 320493
+                },
+                {
+                  "cat": "技術師薪資",
+                  "amount": 71051
+                },
+                {
+                  "cat": "代墊員工支出",
+                  "amount": 3900
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 45404,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 40904
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 4500
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 115827,
+              "items": [
+                {
+                  "cat": "固定成本-品牌管理費",
+                  "amount": 72000
+                },
+                {
+                  "cat": "變動成本-店面租金",
+                  "amount": 32550
+                },
+                {
+                  "cat": "固定成本-營業所得稅",
+                  "amount": 7851
+                },
+                {
+                  "cat": "固定成本-中興保全費",
+                  "amount": 2727
+                },
+                {
+                  "cat": "固定成本-網路費",
+                  "amount": 699
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 34987,
+              "items": [
+                {
+                  "cat": "餐飲點心",
+                  "amount": 23331
+                },
+                {
+                  "cat": "設備採購",
+                  "amount": 6410
+                },
+                {
+                  "cat": "日常用品",
+                  "amount": 5056
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 190
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 778,
+              "items": [
+                {
+                  "cat": "其他支出(確實備註支出內容)",
+                  "amount": 778
+                }
+              ]
+            }
+          ]
+        },
+        "5": {
+          "income_total": 728956,
+          "expense_total": 646576,
+          "income": [
+            {
+              "cat": "營業現金收入",
+              "amount": 402307
+            },
+            {
+              "cat": "營業轉帳收入",
+              "amount": 304590
+            },
+            {
+              "cat": "刷卡金入帳",
+              "amount": 21279
+            },
+            {
+              "cat": "模特費用",
+              "amount": 780
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 413775,
+              "items": [
+                {
+                  "cat": "設計師薪資",
+                  "amount": 309132
+                },
+                {
+                  "cat": "技術師薪資",
+                  "amount": 69618
+                },
+                {
+                  "cat": "人事成本-勞健保",
+                  "amount": 28128
+                },
+                {
+                  "cat": "其他駐店支出",
+                  "amount": 6597
+                },
+                {
+                  "cat": "代墊員工支出",
+                  "amount": 300
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 74113,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 68320
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 4500
+                },
+                {
+                  "cat": "變動成本-水費",
+                  "amount": 1293
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 118294,
+              "items": [
+                {
+                  "cat": "固定成本-品牌管理費",
+                  "amount": 72000
+                },
+                {
+                  "cat": "變動成本-店面租金",
+                  "amount": 32550
+                },
+                {
+                  "cat": "固定成本-中興保全費",
+                  "amount": 13045
+                },
+                {
+                  "cat": "固定成本-網路費",
+                  "amount": 699
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 35716,
+              "items": [
+                {
+                  "cat": "餐飲點心",
+                  "amount": 21819
+                },
+                {
+                  "cat": "設備採購",
+                  "amount": 10130
+                },
+                {
+                  "cat": "日常用品",
+                  "amount": 3577
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 190
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 4678,
+              "items": [
+                {
+                  "cat": "其他支出(確實備註支出內容)",
+                  "amount": 4678
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "guanqian",
+      "name": "公館店",
+      "monthly": [
+        {
+          "month": 1,
+          "income": 3153798,
+          "expense": 4215324,
+          "profit": -1061526
+        },
+        {
+          "month": 2,
+          "income": 2853834,
+          "expense": 2644309,
+          "profit": 209525
+        },
+        {
+          "month": 3,
+          "income": 1762530,
+          "expense": 2773012,
+          "profit": -1010482
+        },
+        {
+          "month": 4,
+          "income": 2358506,
+          "expense": 2261816,
+          "profit": 96690
+        },
+        {
+          "month": 5,
+          "income": 2437273,
+          "expense": 3672495,
+          "profit": -1235222
+        }
+      ],
+      "employees": [
+        {
+          "name": "張肇原(Joe)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 93880
+            },
+            {
+              "month": 1,
+              "amount": 101200
+            },
+            {
+              "month": 2,
+              "amount": 125790
+            },
+            {
+              "month": 3,
+              "amount": 104300
+            },
+            {
+              "month": 4,
+              "amount": 79960
+            },
+            {
+              "month": 5,
+              "amount": 92950
+            }
+          ]
+        },
+        {
+          "name": "洪依琪(Cookie)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 345285
+            },
+            {
+              "month": 1,
+              "amount": 301740
+            },
+            {
+              "month": 2,
+              "amount": 329500
+            }
+          ]
+        },
+        {
+          "name": "莊雅涵(桑吉)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 3,
+              "amount": 122645
+            },
+            {
+              "month": 4,
+              "amount": 105413
+            },
+            {
+              "month": 5,
+              "amount": 93035
+            }
+          ]
+        },
+        {
+          "name": "譚又銓(Owen)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 245400
+            },
+            {
+              "month": 1,
+              "amount": 256840
+            },
+            {
+              "month": 2,
+              "amount": 281170
+            },
+            {
+              "month": 3,
+              "amount": 179440
+            },
+            {
+              "month": 4,
+              "amount": 200000
+            },
+            {
+              "month": 5,
+              "amount": 211980
+            }
+          ]
+        },
+        {
+          "name": "廖尤吟(Amanda)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 463099
+            },
+            {
+              "month": 1,
+              "amount": 716599
+            },
+            {
+              "month": 2,
+              "amount": 609983
+            },
+            {
+              "month": 3,
+              "amount": 297864
+            },
+            {
+              "month": 4,
+              "amount": 436696
+            },
+            {
+              "month": 5,
+              "amount": 367014
+            }
+          ]
+        },
+        {
+          "name": "劉雅雯(66)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 297524
+            },
+            {
+              "month": 1,
+              "amount": 307267
+            },
+            {
+              "month": 2,
+              "amount": 267752
+            },
+            {
+              "month": 3,
+              "amount": 222207
+            },
+            {
+              "month": 4,
+              "amount": 224128
+            },
+            {
+              "month": 5,
+              "amount": 225903
+            }
+          ]
+        },
+        {
+          "name": "姚芓妍(AvA)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 92954
+            },
+            {
+              "month": 1,
+              "amount": 91199
+            },
+            {
+              "month": 2,
+              "amount": 106055
+            },
+            {
+              "month": 3,
+              "amount": 67295
+            },
+            {
+              "month": 4,
+              "amount": 87705
+            },
+            {
+              "month": 5,
+              "amount": 74830
+            }
+          ]
+        },
+        {
+          "name": "關兆倫(關兆)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 141195
+            },
+            {
+              "month": 1,
+              "amount": 139380
+            },
+            {
+              "month": 2,
+              "amount": 157195
+            },
+            {
+              "month": 3,
+              "amount": 79685
+            },
+            {
+              "month": 4,
+              "amount": 157675
+            },
+            {
+              "month": 5,
+              "amount": 115210
+            }
+          ]
+        },
+        {
+          "name": "李錦芸(Debby)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 37500
+            },
+            {
+              "month": 1,
+              "amount": 26130
+            },
+            {
+              "month": 2,
+              "amount": 107220
+            },
+            {
+              "month": 3,
+              "amount": 33800
+            },
+            {
+              "month": 4,
+              "amount": 41750
+            },
+            {
+              "month": 5,
+              "amount": 43100
+            }
+          ]
+        },
+        {
+          "name": "呂芯誼(C)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 162450
+            },
+            {
+              "month": 1,
+              "amount": 264420
+            },
+            {
+              "month": 2,
+              "amount": 254420
+            },
+            {
+              "month": 3,
+              "amount": 105540
+            },
+            {
+              "month": 4,
+              "amount": 200015
+            },
+            {
+              "month": 5,
+              "amount": 185050
+            }
+          ]
+        },
+        {
+          "name": "王子阡(阡阡)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 75040
+            },
+            {
+              "month": 1,
+              "amount": 86232
+            },
+            {
+              "month": 2,
+              "amount": 67939
+            },
+            {
+              "month": 3,
+              "amount": 60310
+            },
+            {
+              "month": 4,
+              "amount": 43344
+            },
+            {
+              "month": 5,
+              "amount": 56315
+            }
+          ]
+        },
+        {
+          "name": "江奇恩(Enzo)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 107100
+            },
+            {
+              "month": 1,
+              "amount": 127700
+            },
+            {
+              "month": 2,
+              "amount": 164930
+            },
+            {
+              "month": 3,
+              "amount": 67320
+            },
+            {
+              "month": 4,
+              "amount": 88780
+            },
+            {
+              "month": 5,
+              "amount": 91530
+            }
+          ]
+        },
+        {
+          "name": "陳星滎(Ring)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 3,
+              "amount": 0
+            },
+            {
+              "month": 4,
+              "amount": 0
+            },
+            {
+              "month": 5,
+              "amount": 134270
+            }
+          ]
+        },
+        {
+          "name": "康維庭(康)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 31738
+            },
+            {
+              "month": 1,
+              "amount": 42340
+            },
+            {
+              "month": 2,
+              "amount": 25300
+            }
+          ]
+        },
+        {
+          "name": "王婉俞(阿魚)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 3,
+              "amount": 0
+            },
+            {
+              "month": 4,
+              "amount": 0
+            },
+            {
+              "month": 5,
+              "amount": 70280
+            }
+          ]
+        },
+        {
+          "name": "周佳安(周安)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 25700
+            },
+            {
+              "month": 1,
+              "amount": 50380
+            },
+            {
+              "month": 2,
+              "amount": 30500
+            },
+            {
+              "month": 3,
+              "amount": 45052
+            },
+            {
+              "month": 4,
+              "amount": 40480
+            },
+            {
+              "month": 5,
+              "amount": 99250
+            }
+          ]
+        },
+        {
+          "name": "李嘉欣(泰琳)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 23510
+            },
+            {
+              "month": 1,
+              "amount": 23910
+            },
+            {
+              "month": 2,
+              "amount": 22790
+            }
+          ]
+        },
+        {
+          "name": "李珮齊(Panda)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 3,
+              "amount": 226500
+            },
+            {
+              "month": 4,
+              "amount": 272470
+            },
+            {
+              "month": 5,
+              "amount": 266077
+            }
+          ]
+        },
+        {
+          "name": "洪美玲(美0)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 6050
+            },
+            {
+              "month": 1,
+              "amount": 13250
+            },
+            {
+              "month": 2,
+              "amount": 3100
+            }
+          ]
+        },
+        {
+          "name": "陳伊新(Errol)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 3,
+              "amount": 61070
+            },
+            {
+              "month": 4,
+              "amount": 52426
+            },
+            {
+              "month": 5,
+              "amount": 109901
+            }
+          ]
+        },
+        {
+          "name": "林張靜(林靜)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 0
+            },
+            {
+              "month": 1,
+              "amount": 400
+            },
+            {
+              "month": 2,
+              "amount": 1200
+            }
+          ]
+        },
+        {
+          "name": "林祥禎(Jennie)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 800
+            },
+            {
+              "month": 1,
+              "amount": 950
+            },
+            {
+              "month": 2,
+              "amount": 2200
+            }
+          ]
+        },
+        {
+          "name": "黃彤揚(揚)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 3,
+              "amount": 27730
+            },
+            {
+              "month": 4,
+              "amount": 23970
+            },
+            {
+              "month": 5,
+              "amount": 35690
+            }
+          ]
+        },
+        {
+          "name": "吳佳容(Karol)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 5380
+            },
+            {
+              "month": 1,
+              "amount": 7534
+            },
+            {
+              "month": 2,
+              "amount": 16265
+            }
+          ]
+        },
+        {
+          "name": "賴皓禹(Oscar)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 3,
+              "amount": 0
+            },
+            {
+              "month": 4,
+              "amount": 0
+            },
+            {
+              "month": 5,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "name": "陳豊鑫(小呱)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 3,
+              "amount": 22760
+            },
+            {
+              "month": 4,
+              "amount": 25630
+            },
+            {
+              "month": 5,
+              "amount": 33940
+            }
+          ]
+        },
+        {
+          "name": "楊璟鍠(Nochic)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 3,
+              "amount": 27950
+            },
+            {
+              "month": 4,
+              "amount": 20362
+            },
+            {
+              "month": 5,
+              "amount": 27125
+            }
+          ]
+        },
+        {
+          "name": "林凌萱(Nina)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 3,
+              "amount": 11310
+            },
+            {
+              "month": 4,
+              "amount": 16455
+            },
+            {
+              "month": 5,
+              "amount": 11710
+            }
+          ]
+        }
+      ],
+      "categories": {
+        "1": {
+          "income_total": 2715798,
+          "expense_total": 3777324,
+          "income": [
+            {
+              "cat": "營業轉帳收入",
+              "amount": 1103679
+            },
+            {
+              "cat": "營業現金收入",
+              "amount": 862179
+            },
+            {
+              "cat": "刷卡金入帳",
+              "amount": 537972
+            },
+            {
+              "cat": "勞健保",
+              "amount": 192478
+            },
+            {
+              "cat": "模特費用",
+              "amount": 11520
+            },
+            {
+              "cat": "空間租金收入",
+              "amount": 4000
+            },
+            {
+              "cat": "店內遲到基金",
+              "amount": 3800
+            },
+            {
+              "cat": "其他收入(確實備註收入內容)",
+              "amount": 170
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 1668747,
+              "items": [
+                {
+                  "cat": "設計師薪資",
+                  "amount": 1093213
+                },
+                {
+                  "cat": "技術師薪資",
+                  "amount": 318024
+                },
+                {
+                  "cat": "人事成本-勞健保",
+                  "amount": 219888
+                },
+                {
+                  "cat": "行政管理薪資",
+                  "amount": 32622
+                },
+                {
+                  "cat": "代墊員工支出",
+                  "amount": 5000
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 235811,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 203476
+                },
+                {
+                  "cat": "變動成本-電費",
+                  "amount": 25335
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 7000
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 322612,
+              "items": [
+                {
+                  "cat": "固定成本-品牌管理費",
+                  "amount": 208000
+                },
+                {
+                  "cat": "變動成本-店面租金",
+                  "amount": 80000
+                },
+                {
+                  "cat": "固定成本-營業所得稅",
+                  "amount": 17004
+                },
+                {
+                  "cat": "品牌共同行銷費",
+                  "amount": 10910
+                },
+                {
+                  "cat": "固定成本-資源回收",
+                  "amount": 4500
+                },
+                {
+                  "cat": "租借費用",
+                  "amount": 2198
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 10577,
+              "items": [
+                {
+                  "cat": "日常用品",
+                  "amount": 6888
+                },
+                {
+                  "cat": "修繕費用",
+                  "amount": 3400
+                },
+                {
+                  "cat": "設備採購",
+                  "amount": 189
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 100
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 1539577,
+              "items": [
+                {
+                  "cat": "股東分潤",
+                  "amount": 1500000
+                },
+                {
+                  "cat": "其他支出(確實備註支出內容)",
+                  "amount": 21090
+                },
+                {
+                  "cat": "Joe 貸款手續費",
+                  "amount": 14687
+                },
+                {
+                  "cat": "遲到基金轉出",
+                  "amount": 3800
+                }
+              ]
+            }
+          ]
+        },
+        "2": {
+          "income_total": 2690774,
+          "expense_total": 2481249,
+          "income": [
+            {
+              "cat": "營業轉帳收入",
+              "amount": 1007164
+            },
+            {
+              "cat": "營業現金收入",
+              "amount": 957072
+            },
+            {
+              "cat": "刷卡金入帳",
+              "amount": 633635
+            },
+            {
+              "cat": "勞健保",
+              "amount": 71228
+            },
+            {
+              "cat": "店內遲到基金",
+              "amount": 9100
+            },
+            {
+              "cat": "模特費用",
+              "amount": 6310
+            },
+            {
+              "cat": "空間租金收入",
+              "amount": 4000
+            },
+            {
+              "cat": "其他收入(確實備註收入內容)",
+              "amount": 1265
+            },
+            {
+              "cat": "呆帳收入",
+              "amount": 1000
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 1501196,
+              "items": [
+                {
+                  "cat": "設計師薪資",
+                  "amount": 1150484
+                },
+                {
+                  "cat": "技術師薪資",
+                  "amount": 307250
+                },
+                {
+                  "cat": "行政管理薪資",
+                  "amount": 33242
+                },
+                {
+                  "cat": "代墊員工支出",
+                  "amount": 10220
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 464093,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 446373
+                },
+                {
+                  "cat": "變動成本-電費",
+                  "amount": 7054
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 7000
+                },
+                {
+                  "cat": "變動成本-水費",
+                  "amount": 3666
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 305333,
+              "items": [
+                {
+                  "cat": "固定成本-品牌管理費",
+                  "amount": 208000
+                },
+                {
+                  "cat": "變動成本-店面租金",
+                  "amount": 80000
+                },
+                {
+                  "cat": "固定成本-中興保全費",
+                  "amount": 10420
+                },
+                {
+                  "cat": "固定成本-資源回收",
+                  "amount": 4500
+                },
+                {
+                  "cat": "租借費用",
+                  "amount": 2198
+                },
+                {
+                  "cat": "郵務費用",
+                  "amount": 215
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 78177,
+              "items": [
+                {
+                  "cat": "餐飲點心",
+                  "amount": 34217
+                },
+                {
+                  "cat": "修繕費用",
+                  "amount": 29500
+                },
+                {
+                  "cat": "設備採購",
+                  "amount": 11700
+                },
+                {
+                  "cat": "日常用品",
+                  "amount": 2450
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 310
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 132450,
+              "items": [
+                {
+                  "cat": "其他支出(確實備註支出內容)",
+                  "amount": 123130
+                },
+                {
+                  "cat": "遲到基金轉出",
+                  "amount": 9100
+                },
+                {
+                  "cat": "呆帳支出",
+                  "amount": 220
+                }
+              ]
+            }
+          ]
+        },
+        "3": {
+          "income_total": 1399714,
+          "expense_total": 2410196,
+          "income": [
+            {
+              "cat": "營業現金收入",
+              "amount": 578595
+            },
+            {
+              "cat": "營業轉帳收入",
+              "amount": 558419
+            },
+            {
+              "cat": "刷卡金入帳",
+              "amount": 249505
+            },
+            {
+              "cat": "模特費用",
+              "amount": 5300
+            },
+            {
+              "cat": "空間租金收入",
+              "amount": 4000
+            },
+            {
+              "cat": "店內遲到基金",
+              "amount": 3600
+            },
+            {
+              "cat": "其他收入(確實備註收入內容)",
+              "amount": 285
+            },
+            {
+              "cat": "呆帳收入",
+              "amount": 10
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 1741137,
+              "items": [
+                {
+                  "cat": "設計師薪資",
+                  "amount": 1149809
+                },
+                {
+                  "cat": "人事成本-勞健保",
+                  "amount": 283963
+                },
+                {
+                  "cat": "技術師薪資",
+                  "amount": 264167
+                },
+                {
+                  "cat": "行政管理薪資",
+                  "amount": 37198
+                },
+                {
+                  "cat": "代墊員工支出",
+                  "amount": 6000
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 332285,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 298593
+                },
+                {
+                  "cat": "變動成本-電費",
+                  "amount": 26692
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 7000
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 294758,
+              "items": [
+                {
+                  "cat": "固定成本-品牌管理費",
+                  "amount": 208000
+                },
+                {
+                  "cat": "變動成本-店面租金",
+                  "amount": 80000
+                },
+                {
+                  "cat": "固定成本-資源回收",
+                  "amount": 4500
+                },
+                {
+                  "cat": "租借費用",
+                  "amount": 2198
+                },
+                {
+                  "cat": "郵務費用",
+                  "amount": 60
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 4795,
+              "items": [
+                {
+                  "cat": "設備採購",
+                  "amount": 2700
+                },
+                {
+                  "cat": "日常用品",
+                  "amount": 1920
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 175
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 37221,
+              "items": [
+                {
+                  "cat": "Joe 貸款手續費",
+                  "amount": 29270
+                },
+                {
+                  "cat": "其他支出(確實備註支出內容)",
+                  "amount": 3981
+                },
+                {
+                  "cat": "遲到基金轉出",
+                  "amount": 3600
+                },
+                {
+                  "cat": "呆帳支出",
+                  "amount": 370
+                }
+              ]
+            }
+          ]
+        },
+        "4": {
+          "income_total": 1708831,
+          "expense_total": 1612141,
+          "income": [
+            {
+              "cat": "營業轉帳收入",
+              "amount": 691616
+            },
+            {
+              "cat": "營業現金收入",
+              "amount": 625299
+            },
+            {
+              "cat": "刷卡金入帳",
+              "amount": 305424
+            },
+            {
+              "cat": "其他收入(確實備註收入內容)",
+              "amount": 73326
+            },
+            {
+              "cat": "模特費用",
+              "amount": 6290
+            },
+            {
+              "cat": "呆帳",
+              "amount": 4125
+            },
+            {
+              "cat": "呆帳收入",
+              "amount": 2751
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 991933,
+              "items": [
+                {
+                  "cat": "設計師薪資",
+                  "amount": 839109
+                },
+                {
+                  "cat": "人事成本-勞健保",
+                  "amount": 138208
+                },
+                {
+                  "cat": "技術師薪資",
+                  "amount": 13445
+                },
+                {
+                  "cat": "行政管理薪資",
+                  "amount": 921
+                },
+                {
+                  "cat": "代墊員工支出",
+                  "amount": 250
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 160447,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 138377
+                },
+                {
+                  "cat": "變動成本-電費",
+                  "amount": 9965
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 7000
+                },
+                {
+                  "cat": "變動成本-水費",
+                  "amount": 5105
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 309504,
+              "items": [
+                {
+                  "cat": "固定成本-品牌管理費",
+                  "amount": 208000
+                },
+                {
+                  "cat": "變動成本-店面租金",
+                  "amount": 80000
+                },
+                {
+                  "cat": "固定成本-營業所得稅",
+                  "amount": 17004
+                },
+                {
+                  "cat": "固定成本-資源回收",
+                  "amount": 4500
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 19680,
+              "items": [
+                {
+                  "cat": "設備採購",
+                  "amount": 10047
+                },
+                {
+                  "cat": "日常用品",
+                  "amount": 5952
+                },
+                {
+                  "cat": "餐飲點心",
+                  "amount": 2971
+                },
+                {
+                  "cat": "修繕費用",
+                  "amount": 500
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 210
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 130577,
+              "items": [
+                {
+                  "cat": "其他支出(確實備註支出內容)",
+                  "amount": 115989
+                },
+                {
+                  "cat": "Joe 貸款手續費",
+                  "amount": 14583
+                },
+                {
+                  "cat": "呆帳支出",
+                  "amount": 5
+                }
+              ]
+            }
+          ]
+        },
+        "5": {
+          "income_total": 2244273,
+          "expense_total": 3479495,
+          "income": [
+            {
+              "cat": "營業轉帳收入",
+              "amount": 854368
+            },
+            {
+              "cat": "營業現金收入",
+              "amount": 696841
+            },
+            {
+              "cat": "刷卡金入帳",
+              "amount": 483862
+            },
+            {
+              "cat": "勞健保",
+              "amount": 186052
+            },
+            {
+              "cat": "其他收入(確實備註收入內容)",
+              "amount": 11640
+            },
+            {
+              "cat": "模特費用",
+              "amount": 9440
+            },
+            {
+              "cat": "代墊結轉",
+              "amount": 1350
+            },
+            {
+              "cat": "呆帳收入",
+              "amount": 720
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 1434802,
+              "items": [
+                {
+                  "cat": "設計師薪資",
+                  "amount": 1030537
+                },
+                {
+                  "cat": "代墊員工支出",
+                  "amount": 283000
+                },
+                {
+                  "cat": "人事成本-勞健保",
+                  "amount": 121265
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 185639,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 154886
+                },
+                {
+                  "cat": "變動成本-電費",
+                  "amount": 23753
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 7000
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 307316,
+              "items": [
+                {
+                  "cat": "固定成本-品牌管理費",
+                  "amount": 208000
+                },
+                {
+                  "cat": "變動成本-店面租金",
+                  "amount": 80000
+                },
+                {
+                  "cat": "固定成本-中興保全費",
+                  "amount": 10420
+                },
+                {
+                  "cat": "固定成本-資源回收",
+                  "amount": 4500
+                },
+                {
+                  "cat": "租借費用",
+                  "amount": 4396
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 35429,
+              "items": [
+                {
+                  "cat": "設備採購",
+                  "amount": 17287
+                },
+                {
+                  "cat": "日常用品",
+                  "amount": 8753
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 5992
+                },
+                {
+                  "cat": "餐飲點心",
+                  "amount": 3397
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 1516309,
+              "items": [
+                {
+                  "cat": "股東分潤",
+                  "amount": 1500000
+                },
+                {
+                  "cat": "Joe 貸款手續費",
+                  "amount": 14549
+                },
+                {
+                  "cat": "其他支出(確實備註支出內容)",
+                  "amount": 1760
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "taida",
+      "name": "台大店",
+      "monthly": [
+        {
+          "month": 1,
+          "income": 1718069,
+          "expense": 1746635,
+          "profit": -28566
+        },
+        {
+          "month": 2,
+          "income": 2082383,
+          "expense": 1834823,
+          "profit": 247560
+        },
+        {
+          "month": 3,
+          "income": 1813574,
+          "expense": 2023827,
+          "profit": -210253
+        },
+        {
+          "month": 4,
+          "income": 858084,
+          "expense": 1509786,
+          "profit": -651702
+        },
+        {
+          "month": 5,
+          "income": 1376027,
+          "expense": 1319829,
+          "profit": 56198
+        }
+      ],
+      "employees": [
+        {
+          "name": "劉沛妘(萬)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 243086
+            },
+            {
+              "month": 1,
+              "amount": 315368
+            },
+            {
+              "month": 2,
+              "amount": 326962
+            },
+            {
+              "month": 3,
+              "amount": 219057
+            },
+            {
+              "month": 4,
+              "amount": 255862
+            },
+            {
+              "month": 5,
+              "amount": 278802
+            }
+          ]
+        },
+        {
+          "name": "莊雅涵(桑吉)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 90018
+            },
+            {
+              "month": 1,
+              "amount": 0
+            },
+            {
+              "month": 2,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "name": "莊惠琪(莊)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 115695
+            },
+            {
+              "month": 1,
+              "amount": 91260
+            },
+            {
+              "month": 2,
+              "amount": 110475
+            },
+            {
+              "month": 3,
+              "amount": 105424
+            },
+            {
+              "month": 4,
+              "amount": 61480
+            },
+            {
+              "month": 5,
+              "amount": 48582
+            }
+          ]
+        },
+        {
+          "name": "陳又琪(Kris)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 73600
+            },
+            {
+              "month": 1,
+              "amount": 45430
+            },
+            {
+              "month": 2,
+              "amount": 28800
+            },
+            {
+              "month": 3,
+              "amount": 43610
+            },
+            {
+              "month": 4,
+              "amount": 55685
+            },
+            {
+              "month": 5,
+              "amount": 60380
+            }
+          ]
+        },
+        {
+          "name": "王祥名(Henz)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 100950
+            },
+            {
+              "month": 1,
+              "amount": 130176
+            },
+            {
+              "month": 2,
+              "amount": 140684
+            },
+            {
+              "month": 3,
+              "amount": 116284
+            },
+            {
+              "month": 4,
+              "amount": 109534
+            },
+            {
+              "month": 5,
+              "amount": 125198
+            }
+          ]
+        },
+        {
+          "name": "吳楀橙(小亨)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 3,
+              "amount": 206567
+            },
+            {
+              "month": 4,
+              "amount": 199108
+            },
+            {
+              "month": 5,
+              "amount": 208565
+            }
+          ]
+        },
+        {
+          "name": "吳佳芸(亨利)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 207275
+            },
+            {
+              "month": 1,
+              "amount": 244115
+            },
+            {
+              "month": 2,
+              "amount": 273138
+            }
+          ]
+        },
+        {
+          "name": "王郁婷(Rita)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 3,
+              "amount": 81250
+            },
+            {
+              "month": 4,
+              "amount": 116048
+            },
+            {
+              "month": 5,
+              "amount": 105015
+            }
+          ]
+        },
+        {
+          "name": "Panda",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 260100
+            },
+            {
+              "month": 1,
+              "amount": 320042
+            },
+            {
+              "month": 2,
+              "amount": 415240
+            }
+          ]
+        },
+        {
+          "name": "朱展賢(仔仔)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 232200
+            },
+            {
+              "month": 1,
+              "amount": 234530
+            },
+            {
+              "month": 2,
+              "amount": 228500
+            },
+            {
+              "month": 3,
+              "amount": 157540
+            },
+            {
+              "month": 4,
+              "amount": 173180
+            },
+            {
+              "month": 5,
+              "amount": 200000
+            }
+          ]
+        },
+        {
+          "name": "康維庭(康)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 3,
+              "amount": 39260
+            },
+            {
+              "month": 4,
+              "amount": 36640
+            },
+            {
+              "month": 5,
+              "amount": 52900
+            }
+          ]
+        },
+        {
+          "name": "陳伊新(Errol)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 41785
+            },
+            {
+              "month": 1,
+              "amount": 49812
+            },
+            {
+              "month": 2,
+              "amount": 39806
+            }
+          ]
+        },
+        {
+          "name": "林張靜(林靜)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 3,
+              "amount": 12640
+            },
+            {
+              "month": 4,
+              "amount": 3450
+            },
+            {
+              "month": 5,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "name": "黃彤揚(揚)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 30872
+            },
+            {
+              "month": 1,
+              "amount": 39850
+            },
+            {
+              "month": 2,
+              "amount": 11790
+            }
+          ]
+        },
+        {
+          "name": "蔡乙銘(乙銘)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 0
+            },
+            {
+              "month": 1,
+              "amount": 0
+            },
+            {
+              "month": 2,
+              "amount": 0
+            },
+            {
+              "month": 3,
+              "amount": 648
+            },
+            {
+              "month": 4,
+              "amount": 2000
+            },
+            {
+              "month": 5,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "name": "林凌萱(Nina)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 1400
+            },
+            {
+              "month": 1,
+              "amount": 8910
+            },
+            {
+              "month": 2,
+              "amount": 600
+            }
+          ]
+        },
+        {
+          "name": "吳佳容(Karol)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 3,
+              "amount": 11760
+            },
+            {
+              "month": 4,
+              "amount": 11550
+            },
+            {
+              "month": 5,
+              "amount": 29325
+            }
+          ]
+        },
+        {
+          "name": "楊璟鍠(Nochic)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 1700
+            },
+            {
+              "month": 1,
+              "amount": 5110
+            },
+            {
+              "month": 2,
+              "amount": 35200
+            }
+          ]
+        },
+        {
+          "name": "林祥禎(Jennie)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 3,
+              "amount": 6400
+            },
+            {
+              "month": 4,
+              "amount": 6100
+            },
+            {
+              "month": 5,
+              "amount": 0
+            }
+          ]
+        }
+      ],
+      "categories": {
+        "1": {
+          "income_total": 1339422,
+          "expense_total": 1371888,
+          "income": [
+            {
+              "cat": "營業轉帳收入",
+              "amount": 571297
+            },
+            {
+              "cat": "營業現金收入",
+              "amount": 524854
+            },
+            {
+              "cat": "刷卡金入帳",
+              "amount": 241991
+            },
+            {
+              "cat": "店內遲到基金",
+              "amount": 700
+            },
+            {
+              "cat": "模特費用",
+              "amount": 580
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 711930,
+              "items": [
+                {
+                  "cat": "設計師薪資",
+                  "amount": 468904
+                },
+                {
+                  "cat": "技術師薪資",
+                  "amount": 107163
+                },
+                {
+                  "cat": "人事成本-勞健保",
+                  "amount": 88217
+                },
+                {
+                  "cat": "行政管理薪資",
+                  "amount": 36606
+                },
+                {
+                  "cat": "代墊員工支出",
+                  "amount": 11040
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 187500,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 175760
+                },
+                {
+                  "cat": "變動成本-電費",
+                  "amount": 7128
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 3500
+                },
+                {
+                  "cat": "變動成本-水費",
+                  "amount": 1112
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 128124,
+              "items": [
+                {
+                  "cat": "固定成本-品牌管理費",
+                  "amount": 112000
+                },
+                {
+                  "cat": "品牌共同行銷費",
+                  "amount": 6750
+                },
+                {
+                  "cat": "固定成本-資源回收",
+                  "amount": 3500
+                },
+                {
+                  "cat": "固定成本-中興保全費",
+                  "amount": 3414
+                },
+                {
+                  "cat": "租借費用",
+                  "amount": 2460
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 6855,
+              "items": [
+                {
+                  "cat": "日常用品",
+                  "amount": 3342
+                },
+                {
+                  "cat": "餐飲點心",
+                  "amount": 3025
+                },
+                {
+                  "cat": "設備採購",
+                  "amount": 323
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 165
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 337479,
+              "items": [
+                {
+                  "cat": "股東分潤",
+                  "amount": 326524
+                },
+                {
+                  "cat": "其他支出(確實備註支出內容)",
+                  "amount": 10255
+                },
+                {
+                  "cat": "遲到基金轉出",
+                  "amount": 700
+                }
+              ]
+            }
+          ]
+        },
+        "2": {
+          "income_total": 1565976,
+          "expense_total": 1318416,
+          "income": [
+            {
+              "cat": "營業轉帳收入",
+              "amount": 637286
+            },
+            {
+              "cat": "營業現金收入",
+              "amount": 606170
+            },
+            {
+              "cat": "刷卡金入帳",
+              "amount": 318320
+            },
+            {
+              "cat": "代墊結轉",
+              "amount": 2400
+            },
+            {
+              "cat": "店內遲到基金",
+              "amount": 1300
+            },
+            {
+              "cat": "模特費用",
+              "amount": 500
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 917652,
+              "items": [
+                {
+                  "cat": "設計師薪資",
+                  "amount": 685405
+                },
+                {
+                  "cat": "技術師薪資",
+                  "amount": 156282
+                },
+                {
+                  "cat": "行政管理薪資",
+                  "amount": 40805
+                },
+                {
+                  "cat": "人事成本-勞健保",
+                  "amount": 35160
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 92186,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 88686
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 3500
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 126654,
+              "items": [
+                {
+                  "cat": "固定成本-品牌管理費",
+                  "amount": 112000
+                },
+                {
+                  "cat": "固定成本-營業所得稅",
+                  "amount": 7740
+                },
+                {
+                  "cat": "固定成本-資源回收",
+                  "amount": 3500
+                },
+                {
+                  "cat": "固定成本-中興保全費",
+                  "amount": 3414
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 127901,
+              "items": [
+                {
+                  "cat": "裝潢布置費",
+                  "amount": 93500
+                },
+                {
+                  "cat": "餐飲點心",
+                  "amount": 20098
+                },
+                {
+                  "cat": "修繕費用",
+                  "amount": 14000
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 225
+                },
+                {
+                  "cat": "日常用品",
+                  "amount": 78
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 54023,
+              "items": [
+                {
+                  "cat": "分店補助金",
+                  "amount": 44000
+                },
+                {
+                  "cat": "其他支出(確實備註支出內容)",
+                  "amount": 8723
+                },
+                {
+                  "cat": "遲到基金轉出",
+                  "amount": 1300
+                }
+              ]
+            }
+          ]
+        },
+        "3": {
+          "income_total": 1314368,
+          "expense_total": 1525121,
+          "income": [
+            {
+              "cat": "營業轉帳收入",
+              "amount": 642359
+            },
+            {
+              "cat": "營業現金收入",
+              "amount": 472399
+            },
+            {
+              "cat": "刷卡金入帳",
+              "amount": 192910
+            },
+            {
+              "cat": "模特費用",
+              "amount": 6200
+            },
+            {
+              "cat": "店內遲到基金",
+              "amount": 500
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 963861,
+              "items": [
+                {
+                  "cat": "設計師薪資",
+                  "amount": 733416
+                },
+                {
+                  "cat": "技術師薪資",
+                  "amount": 189245
+                },
+                {
+                  "cat": "行政管理薪資",
+                  "amount": 41200
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 77228,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 62422
+                },
+                {
+                  "cat": "變動成本-電費",
+                  "amount": 10163
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 3500
+                },
+                {
+                  "cat": "變動成本-水費",
+                  "amount": 1143
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 165319,
+              "items": [
+                {
+                  "cat": "固定成本-品牌管理費",
+                  "amount": 112000
+                },
+                {
+                  "cat": "變動成本-店面租金",
+                  "amount": 43945
+                },
+                {
+                  "cat": "固定成本-資源回收",
+                  "amount": 3500
+                },
+                {
+                  "cat": "固定成本-中興保全費",
+                  "amount": 3414
+                },
+                {
+                  "cat": "租借費用",
+                  "amount": 2460
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 311558,
+              "items": [
+                {
+                  "cat": "裝潢布置費",
+                  "amount": 305760
+                },
+                {
+                  "cat": "日常用品",
+                  "amount": 5248
+                },
+                {
+                  "cat": "設備採購",
+                  "amount": 400
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 150
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 7155,
+              "items": [
+                {
+                  "cat": "其他支出(確實備註支出內容)",
+                  "amount": 6655
+                },
+                {
+                  "cat": "遲到基金轉出",
+                  "amount": 500
+                }
+              ]
+            }
+          ]
+        },
+        "4": {
+          "income_total": 2679535,
+          "expense_total": 2433933,
+          "income": [
+            {
+              "cat": "營業轉帳收入",
+              "amount": 1198889
+            },
+            {
+              "cat": "營業現金收入",
+              "amount": 1125019
+            },
+            {
+              "cat": "刷卡金入帳",
+              "amount": 329205
+            },
+            {
+              "cat": "其他收入(確實備註收入內容)",
+              "amount": 17694
+            },
+            {
+              "cat": "模特費用",
+              "amount": 8710
+            },
+            {
+              "cat": "呆帳收入",
+              "amount": 18
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 1654085,
+              "items": [
+                {
+                  "cat": "設計師薪資",
+                  "amount": 1619836
+                },
+                {
+                  "cat": "行政管理薪資",
+                  "amount": 34249
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 337552,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 330552
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 7000
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 334360,
+              "items": [
+                {
+                  "cat": "固定成本-品牌管理費",
+                  "amount": 224000
+                },
+                {
+                  "cat": "變動成本-店面租金",
+                  "amount": 87880
+                },
+                {
+                  "cat": "固定成本-營業所得稅",
+                  "amount": 15480
+                },
+                {
+                  "cat": "固定成本-資源回收",
+                  "amount": 7000
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 35618,
+              "items": [
+                {
+                  "cat": "設備採購",
+                  "amount": 27080
+                },
+                {
+                  "cat": "餐飲點心",
+                  "amount": 5520
+                },
+                {
+                  "cat": "修繕費用",
+                  "amount": 1800
+                },
+                {
+                  "cat": "日常用品",
+                  "amount": 888
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 330
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 72318,
+              "items": [
+                {
+                  "cat": "其他支出(確實備註支出內容)",
+                  "amount": 72104
+                },
+                {
+                  "cat": "呆帳支出",
+                  "amount": 214
+                }
+              ]
+            }
+          ]
+        },
+        "5": {
+          "income_total": 1351027,
+          "expense_total": 1294829,
+          "income": [
+            {
+              "cat": "營業轉帳收入",
+              "amount": 643405
+            },
+            {
+              "cat": "營業現金收入",
+              "amount": 559145
+            },
+            {
+              "cat": "刷卡金入帳",
+              "amount": 138676
+            },
+            {
+              "cat": "呆帳收入",
+              "amount": 5525
+            },
+            {
+              "cat": "模特費用",
+              "amount": 2710
+            },
+            {
+              "cat": "其他收入(確實備註收入內容)",
+              "amount": 1566
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 917273,
+              "items": [
+                {
+                  "cat": "設計師薪資",
+                  "amount": 771276
+                },
+                {
+                  "cat": "人事成本-勞健保",
+                  "amount": 119544
+                },
+                {
+                  "cat": "行政管理薪資",
+                  "amount": 22453
+                },
+                {
+                  "cat": "代墊員工支出",
+                  "amount": 2000
+                },
+                {
+                  "cat": "技術師薪資",
+                  "amount": 2000
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 113442,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 97732
+                },
+                {
+                  "cat": "變動成本-電費",
+                  "amount": 10488
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 3500
+                },
+                {
+                  "cat": "變動成本-水費",
+                  "amount": 1722
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 166273,
+              "items": [
+                {
+                  "cat": "固定成本-品牌管理費",
+                  "amount": 112000
+                },
+                {
+                  "cat": "變動成本-店面租金",
+                  "amount": 43945
+                },
+                {
+                  "cat": "固定成本-中興保全費",
+                  "amount": 6828
+                },
+                {
+                  "cat": "固定成本-資源回收",
+                  "amount": 3500
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 88420,
+              "items": [
+                {
+                  "cat": "設備採購",
+                  "amount": 60550
+                },
+                {
+                  "cat": "餐飲點心",
+                  "amount": 20226
+                },
+                {
+                  "cat": "日常用品",
+                  "amount": 7504
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 140
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 9421,
+              "items": [
+                {
+                  "cat": "其他支出(確實備註支出內容)",
+                  "amount": 7621
+                },
+                {
+                  "cat": "呆帳支出",
+                  "amount": 1800
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "baoan",
+      "name": "保安店",
+      "monthly": [
+        {
+          "month": 1,
+          "income": 1044550,
+          "expense": 1685426,
+          "profit": -640876
+        },
+        {
+          "month": 2,
+          "income": 1171875,
+          "expense": 2180724,
+          "profit": -1008849
+        },
+        {
+          "month": 3,
+          "income": 743870,
+          "expense": 763183,
+          "profit": -19313
+        },
+        {
+          "month": 4,
+          "income": 880061,
+          "expense": 849172,
+          "profit": 30889
+        },
+        {
+          "month": 5,
+          "income": 1091615,
+          "expense": 978769,
+          "profit": 112846
+        }
+      ],
+      "employees": [
+        {
+          "name": "李昱惟(Eden)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 326810
+            },
+            {
+              "month": 1,
+              "amount": 513580
+            },
+            {
+              "month": 2,
+              "amount": 393090
+            },
+            {
+              "month": 3,
+              "amount": 415400
+            },
+            {
+              "month": 4,
+              "amount": 375700
+            },
+            {
+              "month": 5,
+              "amount": 459430
+            }
+          ]
+        },
+        {
+          "name": "劉邦佑(Vito)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 181980
+            },
+            {
+              "month": 1,
+              "amount": 229010
+            },
+            {
+              "month": 2,
+              "amount": 191050
+            },
+            {
+              "month": 3,
+              "amount": 160680
+            },
+            {
+              "month": 4,
+              "amount": 160130
+            },
+            {
+              "month": 5,
+              "amount": 154030
+            }
+          ]
+        },
+        {
+          "name": "陳家柔(Carol)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 53580
+            },
+            {
+              "month": 1,
+              "amount": 82390
+            },
+            {
+              "month": 2,
+              "amount": 62700
+            }
+          ]
+        },
+        {
+          "name": "鐘禾芸(Ivy)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 106380
+            },
+            {
+              "month": 1,
+              "amount": 131700
+            },
+            {
+              "month": 2,
+              "amount": 74325
+            },
+            {
+              "month": 3,
+              "amount": 92480
+            },
+            {
+              "month": 4,
+              "amount": 61440
+            },
+            {
+              "month": 5,
+              "amount": 172710
+            }
+          ]
+        },
+        {
+          "name": "王仁佑(Aaron)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 12,
+              "amount": 3700
+            },
+            {
+              "month": 1,
+              "amount": 9770
+            },
+            {
+              "month": 2,
+              "amount": 7480
+            },
+            {
+              "month": 3,
+              "amount": 1600
+            },
+            {
+              "month": 4,
+              "amount": 14080
+            },
+            {
+              "month": 5,
+              "amount": 1500
+            }
+          ]
+        },
+        {
+          "name": "陳柏崴(Paco)",
+          "notion_url": "",
+          "monthly_performance": [
+            {
+              "month": 3,
+              "amount": 0
+            },
+            {
+              "month": 4,
+              "amount": 0
+            },
+            {
+              "month": 5,
+              "amount": 1200
+            }
+          ]
+        }
+      ],
+      "categories": {
+        "1": {
+          "income_total": 1144550,
+          "expense_total": 1684146,
+          "income": [
+            {
+              "cat": "營業轉帳收入",
+              "amount": 544300
+            },
+            {
+              "cat": "營業現金收入",
+              "amount": 492970
+            },
+            {
+              "cat": "代墊結轉",
+              "amount": 100000
+            },
+            {
+              "cat": "空間租金收入",
+              "amount": 6000
+            },
+            {
+              "cat": "其他收入(確實備註收入內容)",
+              "amount": 1280
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 671645,
+              "items": [
+                {
+                  "cat": "設計師薪資",
+                  "amount": 299625
+                },
+                {
+                  "cat": "代墊員工支出",
+                  "amount": 200000
+                },
+                {
+                  "cat": "技術師薪資",
+                  "amount": 143719
+                },
+                {
+                  "cat": "人事成本-勞健保",
+                  "amount": 28301
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 78167,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 75367
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 2800
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 23899,
+              "items": [
+                {
+                  "cat": "變動成本-店面租金",
+                  "amount": 20000
+                },
+                {
+                  "cat": "固定成本-營業所得稅",
+                  "amount": 3000
+                },
+                {
+                  "cat": "固定成本-網路費",
+                  "amount": 899
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 112916,
+              "items": [
+                {
+                  "cat": "設備採購",
+                  "amount": 62800
+                },
+                {
+                  "cat": "裝潢布置費",
+                  "amount": 37500
+                },
+                {
+                  "cat": "日常用品",
+                  "amount": 9801
+                },
+                {
+                  "cat": "餐飲點心",
+                  "amount": 2410
+                },
+                {
+                  "cat": "修繕費用",
+                  "amount": 300
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 105
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 797519,
+              "items": [
+                {
+                  "cat": "股東分潤",
+                  "amount": 794626
+                },
+                {
+                  "cat": "其他支出(確實備註支出內容)",
+                  "amount": 2893
+                }
+              ]
+            }
+          ]
+        },
+        "2": {
+          "income_total": 891875,
+          "expense_total": 2050724,
+          "income": [
+            {
+              "cat": "營業轉帳收入",
+              "amount": 406705
+            },
+            {
+              "cat": "營業現金收入",
+              "amount": 387670
+            },
+            {
+              "cat": "代墊結轉",
+              "amount": 90000
+            },
+            {
+              "cat": "空間租金收入",
+              "amount": 7500
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 1747017,
+              "items": [
+                {
+                  "cat": "代墊員工支出",
+                  "amount": 1150030
+                },
+                {
+                  "cat": "設計師薪資",
+                  "amount": 438516
+                },
+                {
+                  "cat": "技術師薪資",
+                  "amount": 158471
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 118693,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 113816
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 3500
+                },
+                {
+                  "cat": "變動成本-水費",
+                  "amount": 1377
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 132309,
+              "items": [
+                {
+                  "cat": "固定成本-品牌管理費",
+                  "amount": 64000
+                },
+                {
+                  "cat": "品牌共同行銷費",
+                  "amount": 47410
+                },
+                {
+                  "cat": "變動成本-店面租金",
+                  "amount": 20000
+                },
+                {
+                  "cat": "固定成本-網路費",
+                  "amount": 899
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 52605,
+              "items": [
+                {
+                  "cat": "裝潢布置費",
+                  "amount": 28680
+                },
+                {
+                  "cat": "餐飲點心",
+                  "amount": 15693
+                },
+                {
+                  "cat": "日常用品",
+                  "amount": 7167
+                },
+                {
+                  "cat": "設備採購",
+                  "amount": 900
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 165
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 100,
+              "items": [
+                {
+                  "cat": "其他支出(確實備註支出內容)",
+                  "amount": 100
+                }
+              ]
+            }
+          ]
+        },
+        "3": {
+          "income_total": 983870,
+          "expense_total": 763183,
+          "income": [
+            {
+              "cat": "營業轉帳收入",
+              "amount": 408830
+            },
+            {
+              "cat": "營業現金收入",
+              "amount": 335040
+            },
+            {
+              "cat": "代墊結轉",
+              "amount": 140000
+            },
+            {
+              "cat": "空間租金收入",
+              "amount": 100000
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 676996,
+              "items": [
+                {
+                  "cat": "設計師薪資",
+                  "amount": 316688
+                },
+                {
+                  "cat": "代墊員工支出",
+                  "amount": 251000
+                },
+                {
+                  "cat": "技術師薪資",
+                  "amount": 109308
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 40426,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 28210
+                },
+                {
+                  "cat": "變動成本-電費",
+                  "amount": 10816
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 1400
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 20899,
+              "items": [
+                {
+                  "cat": "變動成本-店面租金",
+                  "amount": 20000
+                },
+                {
+                  "cat": "固定成本-網路費",
+                  "amount": 899
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 19670,
+              "items": [
+                {
+                  "cat": "裝潢布置費",
+                  "amount": 12000
+                },
+                {
+                  "cat": "餐飲點心",
+                  "amount": 6290
+                },
+                {
+                  "cat": "日常用品",
+                  "amount": 1320
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 60
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 5192,
+              "items": [
+                {
+                  "cat": "其他支出(確實備註支出內容)",
+                  "amount": 5192
+                }
+              ]
+            }
+          ]
+        },
+        "4": {
+          "income_total": 675370,
+          "expense_total": 649142,
+          "income": [
+            {
+              "cat": "營業轉帳收入",
+              "amount": 344340
+            },
+            {
+              "cat": "營業現金收入",
+              "amount": 331030
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 456150,
+              "items": [
+                {
+                  "cat": "設計師薪資",
+                  "amount": 314760
+                },
+                {
+                  "cat": "技術師薪資",
+                  "amount": 124190
+                },
+                {
+                  "cat": "人事成本-勞健保",
+                  "amount": 17200
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 109815,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 104646
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 3500
+                },
+                {
+                  "cat": "變動成本-水費",
+                  "amount": 1669
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 65898,
+              "items": [
+                {
+                  "cat": "固定成本-品牌管理費",
+                  "amount": 32000
+                },
+                {
+                  "cat": "變動成本-店面租金",
+                  "amount": 20000
+                },
+                {
+                  "cat": "品牌共同行銷費",
+                  "amount": 9999
+                },
+                {
+                  "cat": "固定成本-營業所得稅",
+                  "amount": 3000
+                },
+                {
+                  "cat": "固定成本-網路費",
+                  "amount": 899
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 5875,
+              "items": [
+                {
+                  "cat": "日常用品",
+                  "amount": 3755
+                },
+                {
+                  "cat": "修繕費用",
+                  "amount": 2000
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 120
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 11404,
+              "items": [
+                {
+                  "cat": "呆帳支出",
+                  "amount": 11404
+                }
+              ]
+            }
+          ]
+        },
+        "5": {
+          "income_total": 861615,
+          "expense_total": 598269,
+          "income": [
+            {
+              "cat": "營業轉帳收入",
+              "amount": 449460
+            },
+            {
+              "cat": "營業現金收入",
+              "amount": 412155
+            }
+          ],
+          "expense_groups": [
+            {
+              "group": "人事薪資",
+              "subtotal": 405337,
+              "items": [
+                {
+                  "cat": "設計師薪資",
+                  "amount": 296256
+                },
+                {
+                  "cat": "技術師薪資",
+                  "amount": 109081
+                }
+              ]
+            },
+            {
+              "group": "物料成本",
+              "subtotal": 100511,
+              "items": [
+                {
+                  "cat": "變動成本-物料貨款",
+                  "amount": 85456
+                },
+                {
+                  "cat": "變動成本-電費",
+                  "amount": 11555
+                },
+                {
+                  "cat": "委託成本-毛巾洗烘",
+                  "amount": 3500
+                }
+              ]
+            },
+            {
+              "group": "房租與固定",
+              "subtotal": 84899,
+              "items": [
+                {
+                  "cat": "固定成本-品牌管理費",
+                  "amount": 64000
+                },
+                {
+                  "cat": "變動成本-店面租金",
+                  "amount": 20000
+                },
+                {
+                  "cat": "固定成本-網路費",
+                  "amount": 899
+                }
+              ]
+            },
+            {
+              "group": "日常營運",
+              "subtotal": 6649,
+              "items": [
+                {
+                  "cat": "餐飲點心",
+                  "amount": 4430
+                },
+                {
+                  "cat": "日常用品",
+                  "amount": 2114
+                },
+                {
+                  "cat": "銀行&行政規費",
+                  "amount": 105
+                }
+              ]
+            },
+            {
+              "group": "其他支出",
+              "subtotal": 873,
+              "items": [
+                {
+                  "cat": "其他支出(確實備註支出內容)",
+                  "amount": 873
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "monthly_insight": null
+}

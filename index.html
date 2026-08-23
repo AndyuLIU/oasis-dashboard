@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>oásis 財報儀表板</title>
+<style>
+:root { color-scheme: light; }
+body { margin:0; padding:0; font:14px -apple-system,BlinkMacSystemFont,sans-serif; background:#faf9f5; color:#141413; }
+img { max-width:100%; }
+</style>
+
+<style>
+  :root {
+    --bg: #f1efea;
+    --surface: #ffffff;
+    --surface-raised: #faf9f6;
+    --surface-sunken: #e9e5dd;
+    --border: #e0dacd;
+    --border-strong: #cec5b3;
+    --ink: #26221c;
+    --ink-soft: #5c5548;
+    --ink-mute: #948c7c;
+    --accent: #1f6e6f;
+    --accent-strong: #14504f;
+    --accent-soft: #dfeeed;
+    --good: #2f8f5c;
+    --good-soft: #e2f2e8;
+    --critical: #c1453f;
+    --critical-soft: #fbe8e6;
+    --shadow: 0 1px 2px rgba(38,34,28,0.06), 0 6px 20px -8px rgba(38,34,28,0.12);
+    --cat-1: #3d6bb0;
+    --cat-2: #c9702f;
+    --cat-3: #9a5bc4;
+    --cat-4: #b0863a;
+    --cat-5: #a13d64;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17160f;
+      --surface: #201f18;
+      --surface-raised: #27251d;
+      --surface-sunken: #131209;
+      --border: #3a3626;
+      --border-strong: #4c472f;
+      --ink: #f1ede1;
+      --ink-soft: #c6bea9;
+      --ink-mute: #8d8570;
+      --accent: #5cbcb8;
+      --accent-strong: #86d6d1;
+      --accent-soft: #23393a;
+      --good: #56b57f;
+      --good-soft: #1e352a;
+      --critical: #e2837c;
+      --critical-soft: #3a2321;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -8px rgba(0,0,0,0.5);
+      --cat-1: #5c8ad0;
+      --cat-2: #c76f34;
+      --cat-3: #a878d6;
+      --cat-4: #b8863a;
+      --cat-5: #c85e83;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17160f;
+    --surface: #201f18;
+    --surface-raised: #27251d;
+    --surface-sunken: #131209;
+    --border: #3a3626;
+    --border-strong: #4c472f;
+    --ink: #f1ede1;
+    --ink-soft: #c6bea9;
+    --ink-mute: #8d8570;
+    --accent: #5cbcb8;
+    --accent-strong: #86d6d1;
+    --accent-soft: #23393a;
+    --good: #56b57f;
+    --good-soft: #1e352a;
+    --critical: #e2837c;
+    --critical-soft: #3a2321;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -8px rgba(0,0,0,0.5);
+    --cat-1: #5c8ad0;
+    --cat-2: #c76f34;
+    --cat-3: #a878d6;
+    --cat-4: #b8863a;
+    --cat-5: #c85e83;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, "SF Pro Text", "Segoe UI", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  h1, h2, h3 {
+    font-family: ui-serif, Georgia, "Songti TC", "PMingLiU", serif;
+    font-weight: 600;
+    text-wrap: balance;
+    margin: 0;
+    color: var(--ink);
+  }
+  .num { font-variant-numeric: tabular-nums; }
+
+  /* ---------- header ---------- */
+  header.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  header.top .brand-row { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  header.top h1 { font-size: 26px; letter-spacing: 0.01em; }
+  header.top .updated {
+    font-size: 12.5px;
+    color: var(--ink-mute);
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 4px 12px;
+  }
+  .company-strip {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .company-tile {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px 16px;
+    min-width: 132px;
+    box-shadow: var(--shadow);
+  }
+  .company-tile .label { font-size: 11.5px; color: var(--ink-mute); letter-spacing: 0.03em; margin-bottom: 2px; }
+  .company-tile .value { font-size: 19px; font-weight: 700; }
+
+  /* ---------- L1 grid ---------- */
+  #view-overview .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 620px) {
+    #view-overview .grid { grid-template-columns: 1fr; }
+  }
+  .store-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px 20px 16px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: transform 0.12s ease, border-color 0.12s ease;
+  }
+  .store-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--border-strong);
+  }
+  .store-card:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  .store-card .card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+  .store-card h2 { font-size: 17px; }
+  .store-card .month-tag { font-size: 11.5px; color: var(--ink-mute); }
+  .store-card .cum-label { font-size: 11.5px; color: var(--ink-mute); margin-bottom: 3px; }
+  .store-card .cum-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+  .store-card .cum-value { font-size: 27px; font-weight: 700; }
+  .pos { color: var(--good); }
+  .neg { color: var(--critical); }
+  .trend-chip {
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+  }
+  .trend-chip.pos { background: var(--good-soft); color: var(--good); }
+  .trend-chip.neg { background: var(--critical-soft); color: var(--critical); }
+
+  .spark {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    height: 44px;
+  }
+  .spark .bar {
+    flex: 1;
+    border-radius: 3px;
+    min-height: 3px;
+  }
+
+  /* ---------- L2 detail ---------- */
+  #view-detail { display: none; }
+  .back-row { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+  .back-btn {
+    font-size: 13px;
+    color: var(--ink-soft);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .back-btn:hover { border-color: var(--border-strong); color: var(--ink); }
+  .status-pill {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+  }
+  .status-pill.pos { background: var(--good-soft); color: var(--good); }
+  .status-pill.neg { background: var(--critical-soft); color: var(--critical); }
+
+  .detail-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 16px;
+    align-items: start;
+  }
+  @media (max-width: 760px) {
+    .detail-grid { grid-template-columns: 1fr; }
+  }
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+  }
+  .kpi-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+  .kpi-tile {
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 14px;
+  }
+  .kpi-tile .label { font-size: 11.5px; color: var(--ink-mute); margin-bottom: 3px; }
+  .kpi-tile .value { font-size: 21px; font-weight: 700; }
+
+  .chart-title { font-size: 12.5px; color: var(--ink-mute); margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
+  .legend { display: flex; gap: 12px; font-size: 11.5px; color: var(--ink-mute); }
+  .legend .dot { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
+
+  .bar-chart {
+    position: relative;
+    height: 168px;
+    margin-bottom: 6px;
+  }
+  .bar-chart .zero-line {
+    position: absolute;
+    left: 0; right: 0;
+    height: 1px;
+    background: var(--border-strong);
+  }
+  .bar-chart .cols {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    gap: 8px;
+  }
+  .bar-chart .col {
+    flex: 1;
+    position: relative;
+  }
+  .bar-chart .bar {
+    position: absolute;
+    left: 4px; right: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .bar-chart .month-label {
+    position: absolute;
+    bottom: -20px;
+    left: 0; right: 0;
+    text-align: center;
+    font-size: 11px;
+    color: var(--ink-mute);
+  }
+  .tooltip {
+    position: fixed;
+    pointer-events: none;
+    background: var(--ink);
+    color: var(--bg);
+    font-size: 12px;
+    padding: 7px 10px;
+    border-radius: 8px;
+    line-height: 1.45;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translate(-50%, -100%);
+    transition: opacity 0.08s ease;
+    z-index: 20;
+    white-space: nowrap;
+  }
+  .tooltip.show { opacity: 1; }
+  .tooltip b { font-weight: 700; }
+
+  /* employee panel */
+  .emp-panel-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 10px; }
+  .emp-search {
+    font-family: inherit;
+    font-size: 13px;
+    padding: 7px 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--surface-raised);
+    color: var(--ink);
+    width: 120px;
+  }
+  .emp-search:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  .emp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    max-height: 420px;
+    overflow-y: auto;
+    padding-right: 4px;
+  }
+  .emp-row { display: flex; align-items: center; gap: 10px; }
+  .emp-rank {
+    flex-shrink: 0;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700;
+    background: var(--surface-sunken);
+    color: var(--ink-mute);
+  }
+  .emp-rank.top { background: var(--accent); color: var(--surface); }
+  .emp-rank.top2 { background: var(--accent-soft); color: var(--accent-strong); }
+  .emp-body { flex: 1; min-width: 0; }
+  .emp-name {
+    font-size: 13.5px;
+    color: var(--ink);
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .emp-name.linked { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+  .emp-track {
+    background: var(--surface-sunken);
+    border-radius: 999px;
+    height: 6px;
+    margin-top: 5px;
+    overflow: hidden;
+  }
+  .emp-fill { background: var(--accent); height: 100%; border-radius: 999px; }
+  .emp-amount {
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink-soft);
+    min-width: 46px;
+    text-align: right;
+  }
+  .emp-hint { font-size: 11.5px; color: var(--ink-mute); margin-top: 12px; }
+  .emp-empty { font-size: 13px; color: var(--ink-mute); padding: 12px 0; }
+
+  /* ---------- category breakdown ---------- */
+  .cat-panel { margin-top: 16px; }
+  .cat-panel-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .cat-panel-head h3 { font-size: 16px; }
+  .month-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+  .month-tab {
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface-raised);
+    color: var(--ink-soft);
+    cursor: pointer;
+  }
+  .month-tab:hover { border-color: var(--border-strong); }
+  .month-tab.active { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+
+  .cat-columns {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 16px;
+  }
+  @media (max-width: 760px) {
+    .cat-columns { grid-template-columns: 1fr; }
+  }
+  .cat-col-title {
+    font-size: 12.5px;
+    color: var(--ink-mute);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .cat-col-title .total { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .cat-col-title .total.pos { color: var(--good); }
+  .cat-col-title .total.neg { color: var(--critical); }
+
+  .cat-item-row { display: flex; align-items: center; gap: 10px; margin-bottom: 9px; }
+  .cat-item-name {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    flex-shrink: 0;
+    width: 108px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .cat-item-track {
+    flex: 1;
+    background: var(--surface-sunken);
+    border-radius: 4px;
+    height: 10px;
+    overflow: hidden;
+  }
+  .cat-item-fill { height: 100%; border-radius: 4px; }
+  .cat-item-amount {
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink);
+    min-width: 44px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .exp-group { margin-bottom: 14px; }
+  .exp-group:last-child { margin-bottom: 0; }
+  .exp-group-head {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 8px;
+  }
+  .exp-group-dot { width: 9px; height: 9px; border-radius: 3px; flex-shrink: 0; }
+  .exp-group-name { font-size: 12.5px; font-weight: 700; color: var(--ink); }
+  .exp-group-subtotal {
+    margin-left: auto;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+  }
+  .exp-group-items { padding-left: 16px; }
+  .exp-group-items .cat-item-name { width: 92px; }
+
+  .cat-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .cat-legend .dot { display: inline-block; width: 8px; height: 8px; border-radius: 3px; margin-right: 4px; vertical-align: middle; }
+  .cat-note { font-size: 11px; color: var(--ink-mute); margin-top: 10px; }
+
+.insight-panel { margin-bottom: 16px; }
+.insight-panel h3 { font-size: 16px; margin-bottom: 10px; }
+.insight-headline { font-weight: 600; margin-bottom: 8px; }
+.insight-income { color: var(--ink-soft); margin-bottom: 10px; }
+.insight-list { margin: 0 0 10px; padding-left: 18px; font-size: 13px; color: var(--ink-soft); }
+.insight-list li { margin-bottom: 4px; }
+.insight-list.watch { color: var(--critical); }
+.insight-empty { color: var(--ink-mute); font-size: 13px; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand-row">
+      <h1>oásis 財報儀表板</h1>
+      <span class="updated" id="updated-tag"></span>
+    </div>
+    <div class="company-strip" id="company-strip"></div>
+  </header>
+
+  <div id="view-overview">
+    <div class="panel insight-panel" id="insight-panel">
+      <h3>本月分析</h3>
+      <div id="insight-body"><div class="insight-empty">尚無本月分析資料</div></div>
+    </div>
+    <div class="grid" id="store-grid"></div>
+  </div>
+
+  <div id="view-detail">
+    <div class="back-row">
+      <button class="back-btn" id="back-btn">← 返回總覽</button>
+      <h2 id="detail-name"></h2>
+      <span class="status-pill" id="detail-status"></span>
+    </div>
+    <div class="detail-grid">
+      <div class="panel">
+        <div class="kpi-row">
+          <div class="kpi-tile">
+            <div class="label">累計收入</div>
+            <div class="value num" id="kpi-income"></div>
+          </div>
+          <div class="kpi-tile">
+            <div class="label">累計盈虧</div>
+            <div class="value num" id="kpi-profit"></div>
+          </div>
+        </div>
+        <div class="chart-title">
+          <span>月度盈虧</span>
+          <span class="legend">
+            <span><span class="dot" style="background:var(--good)"></span>獲利</span>
+            <span><span class="dot" style="background:var(--critical)"></span>虧損</span>
+          </span>
+        </div>
+        <div class="bar-chart" id="profit-chart"></div>
+      </div>
+
+      <div class="panel">
+        <div class="emp-panel-head">
+          <span class="chart-title" style="margin:0">業績排行（累計）</span>
+          <input class="emp-search" id="emp-search" type="text" placeholder="搜尋姓名" />
+        </div>
+        <div class="emp-list" id="emp-list"></div>
+        <div class="emp-hint">↗ 藍字姓名點擊可跳至 Notion 員工頁面</div>
+      </div>
+    </div>
+
+    <div class="panel cat-panel">
+      <div class="cat-panel-head">
+        <h3>各月收支類別</h3>
+        <div class="month-tabs" id="month-tabs"></div>
+      </div>
+      <div class="cat-columns">
+        <div>
+          <div class="cat-col-title">
+            <span>收入</span>
+            <span class="total pos num" id="cat-income-total"></span>
+          </div>
+          <div id="cat-income-list"></div>
+        </div>
+        <div>
+          <div class="cat-col-title">
+            <span>支出</span>
+            <span class="total neg num" id="cat-expense-total"></span>
+          </div>
+          <div id="cat-expense-list"></div>
+          <div class="cat-legend" id="cat-legend"></div>
+        </div>
+      </div>
+      <div class="cat-note">依交易明細分類，不含帳戶間轉帳沖銷；金額與上方月度盈虧圖（取自結算表）可能有些微差異。</div>
+    </div>
+  </div>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+<script>
+const GROUP_COLORS = { "人事薪資": "var(--cat-1)", "物料成本": "var(--cat-2)", "房租與固定": "var(--cat-3)", "日常營運": "var(--cat-4)", "其他支出": "var(--cat-5)" };
+const MONTH_ORDER = [12,1,2,3,4,5];
+const fmtWan = (v, digits=1) => (v/10000).toFixed(digits);
+const signed = (v, digits=1) => (v >= 0 ? '+' : '') + fmtWan(v, digits) + ' 萬';
+
+const tooltip = document.getElementById('tooltip');
+function showTooltip(evt, html) {
+  tooltip.innerHTML = html;
+  tooltip.classList.add('show');
+  moveTooltip(evt);
+}
+function moveTooltip(evt) {
+  tooltip.style.left = evt.clientX + 'px';
+  tooltip.style.top = (evt.clientY - 12) + 'px';
+}
+function hideTooltip() { tooltip.classList.remove('show'); }
+
+function activeMonths(store) {
+  return store.monthly.filter(m => m.income > 0 || m.expense > 0);
+}
+
+function renderCompanyStrip() {
+  const strip = document.getElementById('company-strip');
+  let totalProfit = 0, latestProfit = 0, latestPrev = 0;
+  DATA.stores.forEach(s => {
+    const months = activeMonths(s);
+    totalProfit += months.reduce((a, m) => a + m.profit, 0);
+    const latest = months[months.length - 1];
+    const prev = months[months.length - 2];
+    if (latest) latestProfit += latest.profit;
+    if (prev) latestPrev += prev.profit;
+  });
+  const trend = latestProfit - latestPrev;
+  strip.innerHTML = `
+    <div class="company-tile">
+      <div class="label">四店累計盈虧</div>
+      <div class="value num ${totalProfit >= 0 ? 'pos' : 'neg'}">${signed(totalProfit, 0)}</div>
+    </div>
+    <div class="company-tile">
+      <div class="label">本月合計</div>
+      <div class="value num ${latestProfit >= 0 ? 'pos' : 'neg'}">${signed(latestProfit, 1)}</div>
+    </div>
+  `;
+}
+
+function renderGrid() {
+  const grid = document.getElementById('store-grid');
+  grid.innerHTML = '';
+  DATA.stores.forEach(store => {
+    const months = activeMonths(store);
+    const totalProfit = months.reduce((s, m) => s + m.profit, 0);
+    const latest = months[months.length - 1];
+    const prev = months[months.length - 2];
+    const maxAbs = Math.max(1, ...months.map(m => Math.abs(m.profit)));
+
+    const card = document.createElement('div');
+    card.className = 'store-card';
+    card.tabIndex = 0;
+    card.setAttribute('role', 'button');
+    card.onclick = () => showDetail(store.id);
+    card.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showDetail(store.id); } };
+
+    let trendHtml = '';
+    if (latest && prev) {
+      const delta = latest.profit - prev.profit;
+      const arrow = delta > 0 ? '↑' : delta < 0 ? '↓' : '—';
+      trendHtml = `<span class="trend-chip ${delta >= 0 ? 'pos' : 'neg'}">${arrow} ${latest.month}月 ${signed(latest.profit, 1)}</span>`;
+    } else if (latest) {
+      trendHtml = `<span class="trend-chip ${latest.profit >= 0 ? 'pos' : 'neg'}">${latest.month}月 ${signed(latest.profit, 1)}</span>`;
+    }
+
+    card.innerHTML = `
+      <div class="card-head">
+        <h2>${store.name}</h2>
+        <span class="month-tag">${latest ? '至 ' + latest.month + ' 月' : ''}</span>
+      </div>
+      <div class="cum-label">累計盈虧</div>
+      <div class="cum-row">
+        <span class="cum-value num ${totalProfit >= 0 ? 'pos' : 'neg'}">${signed(totalProfit, 1)}</span>
+        ${trendHtml}
+      </div>
+      <div class="spark"></div>
+    `;
+    const spark = card.querySelector('.spark');
+    months.forEach(m => {
+      const bar = document.createElement('div');
+      bar.className = 'bar';
+      const h = Math.max(3, Math.round((Math.abs(m.profit) / maxAbs) * 44));
+      bar.style.height = h + 'px';
+      bar.style.background = m.profit >= 0 ? 'var(--good)' : 'var(--critical)';
+      bar.title = m.month + '月：' + signed(m.profit, 1);
+      spark.appendChild(bar);
+    });
+    grid.appendChild(card);
+  });
+}
+
+function renderProfitChart(store) {
+  const el = document.getElementById('profit-chart');
+  el.innerHTML = '';
+  const months = activeMonths(store);
+  const maxAbs = Math.max(1, ...months.map(m => Math.abs(m.profit)));
+  const zeroPct = 58; // baseline position from top, leaves more room for large losses
+  const upSpace = zeroPct - 8;
+  const downSpace = 100 - zeroPct - 16;
+
+  const zero = document.createElement('div');
+  zero.className = 'zero-line';
+  zero.style.top = zeroPct + '%';
+  el.appendChild(zero);
+
+  const cols = document.createElement('div');
+  cols.className = 'cols';
+  months.forEach(m => {
+    const col = document.createElement('div');
+    col.className = 'col';
+    const bar = document.createElement('div');
+    bar.className = 'bar';
+    const ratio = Math.abs(m.profit) / maxAbs;
+    if (m.profit >= 0) {
+      const h = ratio * upSpace;
+      bar.style.bottom = (100 - zeroPct) + '%';
+      bar.style.height = h + '%';
+      bar.style.background = 'var(--good)';
+    } else {
+      const h = ratio * downSpace;
+      bar.style.top = zeroPct + '%';
+      bar.style.height = h + '%';
+      bar.style.background = 'var(--critical)';
+    }
+    bar.addEventListener('mouseenter', (e) => {
+      showTooltip(e, `<b>${m.month} 月</b><br>收入 ${fmtWan(m.income,1)} 萬　支出 ${fmtWan(m.expense,1)} 萬<br>盈虧 ${signed(m.profit,1)}`);
+    });
+    bar.addEventListener('mousemove', moveTooltip);
+    bar.addEventListener('mouseleave', hideTooltip);
+
+    const label = document.createElement('div');
+    label.className = 'month-label';
+    label.textContent = m.month + '月';
+
+    col.appendChild(bar);
+    col.appendChild(label);
+    cols.appendChild(col);
+  });
+  el.appendChild(cols);
+}
+
+let currentEmployees = [];
+function renderEmployees(store, filterText) {
+  const list = document.getElementById('emp-list');
+  list.innerHTML = '';
+  const q = (filterText || '').trim().toLowerCase();
+  const sorted = currentEmployees.filter(e => !q || e.name.toLowerCase().includes(q));
+  if (sorted.length === 0) {
+    list.innerHTML = '<div class="emp-empty">找不到符合的員工</div>';
+    return;
+  }
+  const maxTotal = currentEmployees[0] ? currentEmployees[0].total : 1;
+  sorted.forEach((emp) => {
+    const rankIdx = currentEmployees.indexOf(emp);
+    const pct = Math.max(2, Math.round((emp.total / maxTotal) * 100));
+    const hasUrl = emp.notion_url && emp.notion_url !== '';
+    const row = document.createElement('div');
+    row.className = 'emp-row';
+    const rankClass = rankIdx === 0 ? 'top' : (rankIdx === 1 || rankIdx === 2) ? 'top2' : '';
+    row.innerHTML = `
+      <div class="emp-rank ${rankClass}">${rankIdx + 1}</div>
+      <div class="emp-body">
+        ${hasUrl
+          ? `<a class="emp-name linked" href="${emp.notion_url}" target="_blank" rel="noopener">${emp.name} ↗</a>`
+          : `<span class="emp-name">${emp.name}</span>`}
+        <div class="emp-track"><div class="emp-fill" style="width:${pct}%"></div></div>
+      </div>
+      <div class="emp-amount num">${fmtWan(emp.total, 0)} 萬</div>
+    `;
+    list.appendChild(row);
+  });
+}
+
+function renderCategoryPanel(storeId, month) {
+  const monthData = CATS[storeId] && CATS[storeId][month];
+  const incomeList = document.getElementById('cat-income-list');
+  const expenseList = document.getElementById('cat-expense-list');
+  const legend = document.getElementById('cat-legend');
+
+  if (!monthData) {
+    incomeList.innerHTML = '<div class="emp-empty">此月份尚無明細資料</div>';
+    expenseList.innerHTML = '';
+    legend.innerHTML = '';
+    document.getElementById('cat-income-total').textContent = '';
+    document.getElementById('cat-expense-total').textContent = '';
+    return;
+  }
+
+  document.getElementById('cat-income-total').textContent = fmtWan(monthData.income_total, 1) + ' 萬';
+  document.getElementById('cat-expense-total').textContent = fmtWan(monthData.expense_total, 1) + ' 萬';
+
+  const maxIncome = Math.max(1, ...monthData.income.map(i => i.amount));
+  incomeList.innerHTML = monthData.income.map(i => `
+    <div class="cat-item-row">
+      <span class="cat-item-name" title="${i.cat}">${i.cat}</span>
+      <span class="cat-item-track"><span class="cat-item-fill" style="width:${Math.max(2, Math.round(i.amount / maxIncome * 100))}%; background: var(--accent);"></span></span>
+      <span class="cat-item-amount">${fmtWan(i.amount, 1)}萬</span>
+    </div>
+  `).join('');
+
+  const maxExpenseItem = Math.max(1, ...monthData.expense_groups.flatMap(g => g.items.map(i => i.amount)));
+  expenseList.innerHTML = monthData.expense_groups.map(g => `
+    <div class="exp-group">
+      <div class="exp-group-head">
+        <span class="exp-group-dot" style="background:${GROUP_COLORS[g.group]}"></span>
+        <span class="exp-group-name">${g.group}</span>
+        <span class="exp-group-subtotal">${fmtWan(g.subtotal, 1)}萬</span>
+      </div>
+      <div class="exp-group-items">
+        ${g.items.map(i => `
+          <div class="cat-item-row">
+            <span class="cat-item-name" title="${i.cat}">${i.cat}</span>
+            <span class="cat-item-track"><span class="cat-item-fill" style="width:${Math.max(2, Math.round(i.amount / maxExpenseItem * 100))}%; background: ${GROUP_COLORS[g.group]};"></span></span>
+            <span class="cat-item-amount">${fmtWan(i.amount, 1)}萬</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+
+  legend.innerHTML = Object.keys(GROUP_COLORS).map(g => `
+    <span><span class="dot" style="background:${GROUP_COLORS[g]}"></span>${g}</span>
+  `).join('');
+}
+
+function renderMonthTabs(storeId) {
+  const tabsEl = document.getElementById('month-tabs');
+  const months = CATS[storeId] ? Object.keys(CATS[storeId]).map(Number).sort((a, b) => a - b) : [];
+  const defaultMonth = months.length ? months[months.length - 1] : null;
+  tabsEl.innerHTML = months.map(m => `<button class="month-tab" data-month="${m}">${m}月</button>`).join('');
+  tabsEl.querySelectorAll('.month-tab').forEach(btn => {
+    btn.onclick = () => {
+      tabsEl.querySelectorAll('.month-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderCategoryPanel(storeId, btn.dataset.month);
+    };
+  });
+  if (defaultMonth !== null) {
+    const activeBtn = tabsEl.querySelector(`.month-tab[data-month="${defaultMonth}"]`);
+    if (activeBtn) activeBtn.classList.add('active');
+    renderCategoryPanel(storeId, String(defaultMonth));
+  } else {
+    renderCategoryPanel(storeId, null);
+  }
+}
+
+function showDetail(storeId) {
+  const store = DATA.stores.find(s => s.id === storeId);
+  if (!store) return;
+
+  document.getElementById('view-overview').style.display = 'none';
+  document.getElementById('view-detail').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+
+  const months = activeMonths(store);
+  const totalIncome = months.reduce((s, m) => s + m.income, 0);
+  const totalProfit = months.reduce((s, m) => s + m.profit, 0);
+  const isProfit = totalProfit >= 0;
+
+  document.getElementById('detail-name').textContent = store.name;
+  document.getElementById('detail-status').textContent = isProfit ? '累計獲利' : '累計虧損';
+  document.getElementById('detail-status').className = 'status-pill ' + (isProfit ? 'pos' : 'neg');
+  document.getElementById('kpi-income').textContent = fmtWan(totalIncome, 0) + ' 萬';
+  const profitEl = document.getElementById('kpi-profit');
+  profitEl.textContent = signed(totalProfit, 1);
+  profitEl.className = 'value num ' + (isProfit ? 'pos' : 'neg');
+
+  renderProfitChart(store);
+
+  currentEmployees = store.employees
+    .map(emp => ({ ...emp, total: emp.monthly_performance.reduce((s, m) => s + m.amount, 0) }))
+    .filter(emp => emp.total > 0)
+    .sort((a, b) => b.total - a.total);
+  document.getElementById('emp-search').value = '';
+  renderEmployees(store, '');
+
+  document.getElementById('emp-search').oninput = (e) => renderEmployees(store, e.target.value);
+
+  renderMonthTabs(storeId);
+}
+
+function showOverview() {
+  document.getElementById('view-detail').style.display = 'none';
+  document.getElementById('view-overview').style.display = 'block';
+}
+
+function renderInsight(insight) {
+  const el = document.getElementById('insight-body');
+  if (!insight) { el.innerHTML = '<div class="insight-empty">尚無本月分析資料</div>'; return; }
+  const expenseItems = (insight.expense_highlights || []).map(t => `<li>${t}</li>`).join('');
+  const watchItems = (insight.watch_items || []).map(t => `<li>${t}</li>`).join('');
+  el.innerHTML = `
+    <div class="insight-headline">${insight.headline || ''}</div>
+    <div class="insight-income">${insight.income_summary || ''}</div>
+    ${expenseItems ? `<ul class="insight-list">${expenseItems}</ul>` : ''}
+    ${watchItems ? `<ul class="insight-list watch">${watchItems}</ul>` : ''}
+  `;
+}
+
+
+let DATA = null, CATS = null;
+
+async function loadData() {
+  const res = await fetch('./data.json', { cache: 'no-store' });
+  const json = await res.json();
+  DATA = {
+    updated_at: json.updated_at,
+    stores: json.stores.map(s => ({ id: s.id, name: s.name, monthly: s.monthly, employees: s.employees }))
+  };
+  CATS = Object.fromEntries(json.stores.map(s => [s.id, s.categories]));
+
+  document.getElementById('back-btn').onclick = showOverview;
+  document.getElementById('updated-tag').textContent = '最後更新：' + DATA.updated_at;
+  renderInsight(json.monthly_insight);
+  renderCompanyStrip();
+  renderGrid();
+}
+
+loadData().catch(err => {
+  document.getElementById('store-grid').innerHTML =
+    '<div class="insight-empty">資料載入失敗，請確認 data.json 是否存在同一目錄：' + err.message + '</div>';
+});
+
+</script>
+</body>
+</html>

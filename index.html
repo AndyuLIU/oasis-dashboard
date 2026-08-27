@@ -147,7 +147,7 @@ const COST_KEYS = [
 ];
 const REV_COLOR = '#56633f';
 const TARGET_MARGIN = 16; // 營業利益率目標（%），沿用設計稿預設值，之後可依實際目標調整
-const STORE_COLORS = { mingquan: '#c67139', guanqian: '#56633f', taida: '#8c491a', baoan: '#8fa073' };
+const STORE_COLORS = { mingquan: '#c67139', guanqian: '#56633f', taida: '#8c491a', baoan: '#8fa073', hq: '#6b4f8a' };
 
 const fmt = n => Math.round(n).toLocaleString('en-US');
 const fmtK = n => Math.round(n / 1000).toLocaleString('en-US');
@@ -215,7 +215,10 @@ function render() {
   const scope = state.scope, period = state.period;
   const isAll = scope === 'all';
   const store = STORES.find(s => s.id === scope);
-  const perStoreSeries = STORES.map(s => SERIES[s.id]);
+  // 總部的收入主要是跟各店收的品牌管理費，那筆錢在各店帳上已經算過一次支出，
+  // 「總覽」加總不含總部，避免同一筆內部往來被算兩次；總部仍可在側邊欄單獨點開看。
+  const aggregateStores = STORES.filter(s => s.id !== 'hq');
+  const perStoreSeries = aggregateStores.map(s => SERIES[s.id]);
   const series = isAll ? MONTHS.map((_, i) => sumAcrossStores(perStoreSeries, i)) : SERIES[scope];
   const last = series.length - 1;
   const cur = series[last];
@@ -223,13 +226,14 @@ function render() {
   const ytd = sumMonth(series); // 目前資料全落在同一年內，YTD = 累計所有已知月份
   const monthsInYtd = series.length;
   const shown = period === 'month' ? cur : ytd;
-  const label = isAll ? '四店合計' : store.name;
+  const allLabel = aggregateStores.length + '店合計';
+  const label = isAll ? allLabel : store.name;
   const curMonthLabel = MONTHS[last] + ' 月';
 
   // ---- sidebar nav ----
   const navEl = document.getElementById('nav-items');
   const navBase = 'display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;text-align:left;font-family:var(--font-body);font-size:15.5px;font-weight:600;padding:12px 16px;border:0;border-radius:999px;cursor:pointer;transition:background 140ms;';
-  const navList = [{ id: 'all', name: '總覽（四店合計）', rev: (isAll ? cur : sumAcrossStores(perStoreSeries, last)).rev }]
+  const navList = [{ id: 'all', name: '總覽（' + allLabel + '）', rev: (isAll ? cur : sumAcrossStores(perStoreSeries, last)).rev }]
     .concat(STORES.map(s => ({ id: s.id, name: s.name, rev: SERIES[s.id][SERIES[s.id].length - 1].rev })));
   navEl.innerHTML = navList.map(n => {
     const on = n.id === scope;
@@ -249,10 +253,10 @@ function render() {
   document.getElementById('period-caption-2').textContent = periodCaption;
 
   // ---- header ----
-  document.getElementById('scope-kicker').textContent = isAll ? '四店合計' : '單店檢視';
+  document.getElementById('scope-kicker').textContent = isAll ? allLabel : '單店檢視';
   document.getElementById('title').textContent = isAll ? '總覽' : store.name;
   document.getElementById('subtitle').textContent = isAll
-    ? '民權、公館、台大、保安四間門市的收入、支出與獲利合計。'
+    ? aggregateStores.map(s => s.name).join('、') + '的收入、支出與獲利合計（不含總部）。'
     : '單店財務檢視（' + store.name + '）。';
   document.getElementById('report-scope').textContent = label + ' · ' + curMonthLabel;
 
@@ -326,8 +330,8 @@ function render() {
   }
   if (mgn < TARGET_MARGIN) pushFlag('warn', '利益率未達目標', '本月利益率 ' + mgn.toFixed(1) + '%，低於 ' + TARGET_MARGIN + '% 的目標，缺口約 ' + fmt(shown.rev * (TARGET_MARGIN - mgn) / 100) + ' 元。', '目標 ' + TARGET_MARGIN + '%', 1);
   if (isAll) {
-    const worst = STORES.map(s => { const m = SERIES[s.id][last]; return { s, m, mg: m.rev ? m.op / m.rev * 100 : 0 }; }).sort((a, b) => a.mg - b.mg)[0];
-    if (worst.mg < TARGET_MARGIN) pushFlag(worst.mg < TARGET_MARGIN * 0.6 ? 'alert' : 'warn', worst.s.name + '拖累整體', worst.s.name + '本月利益率僅 ' + worst.mg.toFixed(1) + '%，是四店最低。若拉到平均水準，全體營業利益可再增約 ' + fmt(worst.m.rev * (mgn - worst.mg) / 100) + ' 元。', '營收 ' + fmt(worst.m.rev) + ' 元', 0);
+    const worst = aggregateStores.map(s => { const m = SERIES[s.id][last]; return { s, m, mg: m.rev ? m.op / m.rev * 100 : 0 }; }).sort((a, b) => a.mg - b.mg)[0];
+    if (worst.mg < TARGET_MARGIN) pushFlag(worst.mg < TARGET_MARGIN * 0.6 ? 'alert' : 'warn', worst.s.name + '拖累整體', worst.s.name + '本月利益率僅 ' + worst.mg.toFixed(1) + '%，是門市中最低。若拉到平均水準，全體營業利益可再增約 ' + fmt(worst.m.rev * (mgn - worst.mg) / 100) + ' 元。', '營收 ' + fmt(worst.m.rev) + ' 元', 0);
   }
   if (opChg > 8) pushFlag('good', '獲利改善', '營業利益較上月成長 ' + opChg.toFixed(1) + '%，成本沒有同步放大，屬於實質改善。', '利益 ' + fmt(cur.op) + ' 元');
   if (!flags.length) pushFlag('good', '本月無異常', '各項費用都落在近期的正常區間內，收入與支出的比例沒有明顯偏移。', '檢查 ' + (COST_KEYS.length + 2) + ' 項指標');
@@ -354,7 +358,7 @@ function render() {
   const actions = [];
   if (ratio(cur, 'labor') > 0.48) actions.push('把人事佔比壓回 48% 以下：檢視離峰時段排班，或改以業績連動的獎金結構。');
   if (isAll) actions.push('請利益率最低的分店店長帶當月費用明細來對帳，逐項確認可省與不可省。');
-  else actions.push('把 ' + store.name + ' 的費用明細與四店平均逐項比對，找出高於平均的兩項先處理。');
+  else actions.push('把 ' + store.name + ' 的費用明細與其他門市平均逐項比對，找出高於平均的兩項先處理。');
   if (mgn < TARGET_MARGIN) actions.push('訂下一季的營收目標：利益率要到 ' + TARGET_MARGIN + '%，營收約需 ' + fmt(cur.exp / (1 - TARGET_MARGIN / 100)) + ' 元。');
   actions.push('核對本月大額支出的憑證與入帳月份，避免跨月重複或漏記。');
   const actionsOut = actions.slice(0, 3).map((t, i) => ({ n: String(i + 1).padStart(2, '0'), text: t }));
@@ -366,7 +370,7 @@ function render() {
 
   // ---- stacked bar chart: 收入與支出結構 ----
   const groups = isAll
-    ? STORES.map(s => ({ label: s.name, m: SERIES[s.id][last] }))
+    ? aggregateStores.map(s => ({ label: s.name, m: SERIES[s.id][last] }))
     : series.map((m, i) => ({ label: MONTHS[i] + ' 月', m }));
   const bMax = Math.max(...groups.map(g => Math.max(g.m.rev, g.m.exp)), 1);
   const bt = niceTicks(bMax, 4);
@@ -402,7 +406,7 @@ function render() {
   const monthCount = MONTHS.length;
   document.getElementById('trend-title').textContent = '近 ' + monthCount + ' 個月走勢';
   const tSeries = isAll
-    ? STORES.map(s => ({ label: s.name, color: s.color, vals: SERIES[s.id].map(m => m.rev) }))
+    ? aggregateStores.map(s => ({ label: s.name, color: s.color, vals: SERIES[s.id].map(m => m.rev) }))
     : [{ label: '營業收入', color: store.color, vals: series.map(m => m.rev) }, { label: '營業利益', color: '#8fa073', vals: series.map(m => m.op) }];
   const tMax = Math.max(...tSeries.flatMap(s => s.vals), 1);
   const tt = niceTicks(tMax, 4);

@@ -9,43 +9,50 @@
           "month": 1,
           "income": 1584847,
           "expense": 1579296,
-          "profit": 5551
+          "profit": 5551,
+          "non_operating": 0
         },
         {
           "month": 2,
           "income": 1463745,
           "expense": 1238120,
-          "profit": 225625
+          "profit": 225625,
+          "non_operating": 0
         },
         {
           "month": 3,
           "income": 1366847,
           "expense": 1435443,
-          "profit": -68596
+          "profit": -68596,
+          "non_operating": 0
         },
         {
           "month": 4,
           "income": 978164,
           "expense": 927040,
-          "profit": 51124
+          "profit": 51124,
+          "non_operating": 0
         },
         {
           "month": 5,
           "income": 813157,
           "expense": 730777,
-          "profit": 82380
+          "profit": 82380,
+          "non_operating": 0
         },
         {
           "month": 6,
           "income": 1262128,
           "expense": 1291252,
-          "profit": -29124
+          "profit": -29124,
+          "non_operating": 0
         },
         {
           "month": 7,
           "income": 735319,
           "expense": 674772,
-          "profit": 60547
+          "profit": 60547,
+          "non_operating": 0
         }
       ],
       "categories": {}
@@ -58,43 +65,50 @@
           "month": 1,
           "income": 3153798,
           "expense": 4215324,
-          "profit": -1061526
+          "profit": -1061526,
+          "non_operating": 0
         },
         {
           "month": 2,
           "income": 2853834,
           "expense": 2644309,
-          "profit": 209525
+          "profit": 209525,
+          "non_operating": 0
         },
         {
           "month": 3,
           "income": 1762530,
           "expense": 2773012,
-          "profit": -1010482
+          "profit": -1010482,
+          "non_operating": 0
         },
         {
           "month": 4,
           "income": 2358506,
           "expense": 2261816,
-          "profit": 96690
+          "profit": 96690,
+          "non_operating": 0
         },
         {
           "month": 5,
           "income": 2437273,
           "expense": 3672495,
-          "profit": -1235222
+          "profit": -1235222,
+          "non_operating": 0
         },
         {
           "month": 6,
           "income": 2433092,
           "expense": 2291744,
-          "profit": 141348
+          "profit": 141348,
+          "non_operating": 0
         },
         {
           "month": 7,
           "income": 2411381,
           "expense": 2109298,
-          "profit": 302083
+          "profit": 302083,
+          "non_operating": 0
         }
       ],
       "categories": {}
@@ -107,43 +121,50 @@
           "month": 1,
           "income": 1718069,
           "expense": 1746635,
-          "profit": -28566
+          "profit": -28566,
+          "non_operating": 0
         },
         {
           "month": 2,
           "income": 2082383,
           "expense": 1834823,
-          "profit": 247560
+          "profit": 247560,
+          "non_operating": 0
         },
         {
           "month": 3,
           "income": 1813574,
           "expense": 2023827,
-          "profit": -210253
+          "profit": -210253,
+          "non_operating": 0
         },
         {
           "month": 4,
           "income": 858084,
           "expense": 1509786,
-          "profit": -651702
+          "profit": -651702,
+          "non_operating": 0
         },
         {
           "month": 5,
           "income": 1376027,
           "expense": 1319829,
-          "profit": 56198
+          "profit": 56198,
+          "non_operating": 0
         },
         {
           "month": 6,
           "income": 1373895,
           "expense": 1843983,
-          "profit": -470088
+          "profit": -470088,
+          "non_operating": 0
         },
         {
           "month": 7,
           "income": 1299492,
           "expense": 1422254,
-          "profit": -122762
+          "profit": -122762,
+          "non_operating": 0
         }
       ],
       "categories": {}
@@ -156,43 +177,50 @@
           "month": 1,
           "income": 1044550,
           "expense": 1685426,
-          "profit": -640876
+          "profit": -640876,
+          "non_operating": 0
         },
         {
           "month": 2,
           "income": 1171875,
           "expense": 2180724,
-          "profit": -1008849
+          "profit": -1008849,
+          "non_operating": 0
         },
         {
           "month": 3,
           "income": 743870,
           "expense": 763183,
-          "profit": -19313
+          "profit": -19313,
+          "non_operating": 0
         },
         {
           "month": 4,
           "income": 880061,
           "expense": 849172,
-          "profit": 30889
+          "profit": 30889,
+          "non_operating": 0
         },
         {
           "month": 5,
           "income": 1091615,
           "expense": 978769,
-          "profit": 112846
+          "profit": 112846,
+          "non_operating": 0
         },
         {
           "month": 6,
           "income": 960824,
           "expense": 893672,
-          "profit": 67152
+          "profit": 67152,
+          "non_operating": 0
         },
         {
           "month": 7,
           "income": 770219,
           "expense": 963271,
-          "profit": -193052
+          "profit": -193052,
+          "non_operating": 0
         }
       ],
       "categories": {}
@@ -205,43 +233,50 @@
           "month": 1,
           "income": 1146373,
           "expense": 1566298,
-          "profit": -419925
+          "profit": -419925,
+          "non_operating": 0
         },
         {
           "month": 2,
           "income": 566138,
           "expense": 510343,
-          "profit": 55795
+          "profit": 55795,
+          "non_operating": 0
         },
         {
           "month": 3,
           "income": 392000,
           "expense": 330044,
-          "profit": 61956
+          "profit": 61956,
+          "non_operating": 0
         },
         {
           "month": 4,
           "income": 424000,
           "expense": 306926,
-          "profit": 117074
+          "profit": 117074,
+          "non_operating": 0
         },
         {
           "month": 5,
           "income": 460000,
           "expense": 388065,
-          "profit": 71935
+          "profit": 71935,
+          "non_operating": 0
         },
         {
           "month": 6,
           "income": 521402,
           "expense": 517407,
-          "profit": 3995
+          "profit": 3995,
+          "non_operating": 0
         },
         {
           "month": 7,
           "income": 424607,
           "expense": 612746,
-          "profit": -188139
+          "profit": -188139,
+          "non_operating": 0
         }
       ],
       "categories": {}

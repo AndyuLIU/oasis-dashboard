@@ -140,6 +140,20 @@
       </table>
     </div>
 
+    <div style="margin: 74px 0 20px;">
+      <h2 style="font-size: 31px; margin: 0 0 10px;">綜合損益表</h2>
+      <p id="is-table-caption" style="font-size: 15px; color: #645c50; margin: 0;"></p>
+    </div>
+
+    <div class="chart-scroll" style="background: #f9f4ed; border-radius: 28px; padding: 12px 24px 20px; box-shadow: 0 1px 2px rgba(46,43,37,0.14); overflow-x: auto;">
+      <table class="table" style="min-width: 980px;">
+        <thead>
+          <tr id="is-table-head"></tr>
+        </thead>
+        <tbody id="is-table-body"></tbody>
+      </table>
+    </div>
+
     <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 26px; margin: 74px 0 20px; flex-wrap: wrap;">
       <div>
         <h2 style="font-size: 31px; margin: 0 0 10px;">收入與支出結構</h2>
@@ -247,17 +261,49 @@ function niceTicks(max, count) {
   return { top, vals: out };
 }
 
+const IS_ROWS = [
+  { key: null, name: '營業收入', header: true },
+  { key: 'revenue_net', name: '收入淨額' },
+  { key: 'other_operating_revenue', name: '其他營業收入淨額' },
+  { key: 'revenue_total', name: '營業收入合計', strong: true },
+  { key: 'cogs_goods', name: '貨款成本' },
+  { key: 'cogs_equipment', name: '設備成本' },
+  { key: 'cogs_technician_salary', name: '技術師薪資' },
+  { key: 'cogs_designer_salary', name: '設計師薪資' },
+  { key: 'cogs_total', name: '營業成本合計', strong: true },
+  { key: null, name: '營業毛利', header: true },
+  { key: 'gross_profit', name: '營業毛利合計', strong: true },
+  { key: 'admin_expense', name: '管理費用' },
+  { key: 'sales_expense', name: '銷售費用' },
+  { key: 'opex_total', name: '營業費用合計', strong: true },
+  { key: 'operating_income', name: '營業利益', strong: true, hl: true },
+  { key: null, name: '營業外收入及支出', header: true },
+  { key: 'other_expense', name: '其他支出' },
+  { key: 'shareholder_expense', name: '股東分潤支出' },
+  { key: 'non_operating_expense_total', name: '營業外支出', strong: true },
+  { key: 'other_income', name: '其他收入' },
+  { key: 'bank_interest_income', name: '銀行利息收入' },
+  { key: 'non_operating_income_total', name: '營業外收入', strong: true },
+  { key: 'non_operating_net', name: '營業外利益', strong: true },
+  { key: 'pretax_income', name: '稅前淨利（淨損）', strong: true },
+  { key: 'income_tax', name: '所得稅費用' },
+  { key: 'net_income', name: '本期淨利（淨損）', strong: true },
+  { key: 'total_comprehensive_income', name: '本期綜合損益總額', strong: true, hl: true }
+];
+
 const state = { scope: 'all', period: 'month', monthIndex: null };
 let STORES = [];   // [{id, name, color}]
 let SERIES = {};   // id -> series[]
 let MONTHS = [];   // list of month numbers present (assumes shared across stores)
+let INCOME_STMT = {}; // id -> { "1": {...}, "2": {...}, ... }
 
 async function loadData() {
   const res = await fetch('./data.json', { cache: 'no-store' });
   const json = await res.json();
   STORES = json.stores.map(s => ({ id: s.id, name: s.name, color: STORE_COLORS[s.id] || '#8c491a' }));
   SERIES = {};
-  json.stores.forEach(s => { SERIES[s.id] = buildSeries(s); });
+  INCOME_STMT = {};
+  json.stores.forEach(s => { SERIES[s.id] = buildSeries(s); INCOME_STMT[s.id] = s.income_statement || {}; });
   MONTHS = (json.stores[0] ? json.stores[0].monthly.map(m => m.month) : []);
   document.getElementById('period-caption').textContent = '';
   render();
@@ -509,6 +555,38 @@ function render() {
     </tr>`;
   }).join('');
   document.getElementById('table-caption').textContent = label + ' ' + curMonthLabel + '結，與上月及累計對照。';
+
+  // ---- 綜合損益表（依交易明細重新分類，12 個月全年對照）----
+  const getIncomeStatementMonth = m => {
+    if (!isAll) {
+      const stmt = INCOME_STMT[scope];
+      return stmt ? stmt[String(m)] : null;
+    }
+    const parts = aggregateStores.map(s => INCOME_STMT[s.id] && INCOME_STMT[s.id][String(m)]).filter(Boolean);
+    if (!parts.length) return null;
+    const out = {};
+    Object.keys(parts[0]).forEach(k => { out[k] = parts.reduce((a, p) => a + (p[k] || 0), 0); });
+    return out;
+  };
+  const isHeadCell = 'text-align:right;padding:14px 10px;font-family:var(--font-heading);font-size:13px;color:#645c50;border-bottom:1px solid #dcd3c4;white-space:nowrap;';
+  document.getElementById('is-table-head').innerHTML =
+    '<th style="text-align:left;padding:14px 12px;font-family:var(--font-heading);font-size:13px;color:#645c50;border-bottom:1px solid #dcd3c4;">項目</th>' +
+    Array.from({ length: 12 }, (_, i) => `<th style="${isHeadCell}">${i + 1}月</th>`).join('');
+  const isCell = 'padding:11px 10px;text-align:right;border-bottom:1px solid #eee7db;white-space:nowrap;';
+  document.getElementById('is-table-body').innerHTML = IS_ROWS.map(r => {
+    if (r.header) {
+      return `<tr><td colspan="13" style="padding:16px 12px 6px;font-weight:700;color:#82796a;font-size:12.5px;letter-spacing:0.04em;border-bottom:1px solid #eee7db;">${r.name}</td></tr>`;
+    }
+    const nameStyle = 'padding:11px 12px;text-align:left;border-bottom:1px solid #eee7db;' + (r.strong ? 'font-weight:700;' : 'color:#474238;padding-left:26px;');
+    const cellsHtml = Array.from({ length: 12 }, (_, i) => {
+      const stmt = getIncomeStatementMonth(i + 1);
+      const v = stmt ? stmt[r.key] : null;
+      const valStyle = isCell + (r.hl ? 'font-weight:700;color:#8c491a;' : r.strong ? 'font-weight:700;color:#201e1d;' : 'color:#474238;');
+      return `<td class="num" style="${valStyle}">${v == null ? '—' : fmt(v)}</td>`;
+    }).join('');
+    return `<tr><td style="${nameStyle}">${r.name}</td>${cellsHtml}</tr>`;
+  }).join('');
+  document.getElementById('is-table-caption').textContent = label + ' 各月綜合損益表（依交易明細重新分類；銷售／管理費用切分與所得稅為概算，僅供內部參考）。';
 }
 
 function setMenuOpen(open) {

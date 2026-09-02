@@ -121,32 +121,12 @@
     <div id="kpi-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(232px, 1fr)); gap: 14px;"></div>
 
     <div style="margin: 74px 0 20px;">
-      <h2 style="font-size: 31px; margin: 0 0 10px;">損益明細</h2>
-      <p id="table-caption" style="font-size: 15px; color: #645c50; margin: 0;"></p>
-    </div>
-
-    <div style="background: #f9f4ed; border-radius: 28px; padding: 12px 30px 20px; box-shadow: 0 1px 2px rgba(46,43,37,0.14); overflow-x: auto;">
-      <table class="table">
-        <thead>
-          <tr>
-            <th style="text-align: left; padding: 18px 12px; font-family: var(--font-heading); font-size: 14px; color: #645c50; border-bottom: 1px solid #dcd3c4;">項目</th>
-            <th style="text-align: right; padding: 18px 12px; font-family: var(--font-heading); font-size: 14px; color: #645c50; border-bottom: 1px solid #dcd3c4;">本月</th>
-            <th style="text-align: right; padding: 18px 12px; font-family: var(--font-heading); font-size: 14px; color: #645c50; border-bottom: 1px solid #dcd3c4;">佔營收</th>
-            <th style="text-align: right; padding: 18px 12px; font-family: var(--font-heading); font-size: 14px; color: #645c50; border-bottom: 1px solid #dcd3c4;">上月</th>
-            <th style="text-align: right; padding: 18px 12px; font-family: var(--font-heading); font-size: 14px; color: #645c50; border-bottom: 1px solid #dcd3c4;">累計年初至今</th>
-          </tr>
-        </thead>
-        <tbody id="table-body"></tbody>
-      </table>
-    </div>
-
-    <div style="margin: 74px 0 20px;">
       <h2 style="font-size: 31px; margin: 0 0 10px;">綜合損益表</h2>
       <p id="is-table-caption" style="font-size: 15px; color: #645c50; margin: 0;"></p>
     </div>
 
     <div class="chart-scroll" style="background: #f9f4ed; border-radius: 28px; padding: 12px 24px 20px; box-shadow: 0 1px 2px rgba(46,43,37,0.14); overflow-x: auto;">
-      <table class="table" style="min-width: 980px;">
+      <table class="table" id="is-table">
         <thead>
           <tr id="is-table-head"></tr>
         </thead>
@@ -525,38 +505,8 @@ function render() {
   document.getElementById('trend-caption').textContent = isAll ? '各店營收，單位千元。' : store.name + '營收與營業利益，單位千元。';
   document.getElementById('trend-legend').innerHTML = tSeries.map(s => `<span style="display: inline-flex; align-items: center; gap: 8px; white-space: nowrap;"><span style="${dot(s.color)}"></span>${s.label}</span>`).join('');
 
-  // ---- P&L table ----
-  const rowDef = [{ key: 'rev', name: '營業收入', strong: true }, { key: 'material', name: '材料／進貨成本' }, { key: 'gross', name: '毛利', strong: true },
-    { key: 'labor', name: '人事費用' }, { key: 'rent', name: '租金' }, { key: 'util', name: '水電雜支' }, { key: 'other', name: '其他營業費用' },
-    { key: 'exp', name: '營業支出合計', strong: true }, { key: 'op', name: '營業利益', strong: true, hl: true }];
-  if (cur.nonOp || prev.nonOp || ytd.nonOp) {
-    rowDef.push({ key: 'nonOp', name: '股東分潤（股東往來，不計入營業費用）', note: true });
-  }
-  const pickVal = (m, key) => {
-    if (key === 'rev') return m.rev;
-    if (key === 'exp') return m.exp;
-    if (key === 'op') return m.op;
-    if (key === 'nonOp') return m.nonOp;
-    if (key === 'gross') return m.rev - m.costs.material;
-    return m.costs[key];
-  };
-  const cell = 'padding:15px 12px;text-align:right;border-bottom:1px solid #eee7db;';
-  document.getElementById('table-body').innerHTML = rowDef.map(r => {
-    const v = pickVal(cur, r.key);
-    const nameStyle = 'padding:15px 12px;text-align:left;border-bottom:1px solid #eee7db;' + (r.strong ? 'font-weight:700;' : r.note ? 'color:#82796a;font-style:italic;font-size:13.5px;padding-left:28px;' : 'color:#474238;padding-left:28px;');
-    const valStyle = cell + (r.hl ? 'font-weight:700;color:#8c491a;font-size:16px;' : r.note ? 'color:#82796a;font-style:italic;font-size:13.5px;' : r.strong ? 'font-weight:700;' : 'color:#474238;');
-    const pctStyle = cell + 'color:#645c50;' + (r.note ? 'font-style:italic;font-size:13.5px;' : '');
-    return `<tr>
-      <td style="${nameStyle}">${r.name}</td>
-      <td class="num" style="${valStyle}">${fmt(v)}</td>
-      <td class="num" style="${pctStyle}">${pct(v, cur.rev)}</td>
-      <td class="num" style="${pctStyle}">${fmt(pickVal(prev, r.key))}</td>
-      <td class="num" style="${pctStyle}">${fmt(pickVal(ytd, r.key))}</td>
-    </tr>`;
-  }).join('');
-  document.getElementById('table-caption').textContent = label + ' ' + curMonthLabel + '結，與上月及累計對照。';
-
-  // ---- 綜合損益表（依交易明細重新分類，12 個月全年對照）----
+  // ---- 綜合損益表（依交易明細重新分類）----
+  // 選單一月份：只顯示該月一欄；選 YTD：顯示 1–12 月全部欄位。
   const getIncomeStatementMonth = m => {
     if (!isAll) {
       const stmt = INCOME_STMT[scope];
@@ -568,25 +518,30 @@ function render() {
     Object.keys(parts[0]).forEach(k => { out[k] = parts.reduce((a, p) => a + (p[k] || 0), 0); });
     return out;
   };
+  const isMonthView = period === 'month';
+  const isMonths = isMonthView ? [monthIdx + 1] : Array.from({ length: 12 }, (_, i) => i + 1);
+  document.getElementById('is-table').style.minWidth = isMonthView ? '' : '980px';
   const isHeadCell = 'text-align:right;padding:14px 10px;font-family:var(--font-heading);font-size:13px;color:#645c50;border-bottom:1px solid #dcd3c4;white-space:nowrap;';
   document.getElementById('is-table-head').innerHTML =
     '<th style="text-align:left;padding:14px 12px;font-family:var(--font-heading);font-size:13px;color:#645c50;border-bottom:1px solid #dcd3c4;">項目</th>' +
-    Array.from({ length: 12 }, (_, i) => `<th style="${isHeadCell}">${i + 1}月</th>`).join('');
+    isMonths.map(m => `<th style="${isHeadCell}">${isMonthView ? '金額' : m + '月'}</th>`).join('');
   const isCell = 'padding:11px 10px;text-align:right;border-bottom:1px solid #eee7db;white-space:nowrap;';
   document.getElementById('is-table-body').innerHTML = IS_ROWS.map(r => {
     if (r.header) {
-      return `<tr><td colspan="13" style="padding:16px 12px 6px;font-weight:700;color:#82796a;font-size:12.5px;letter-spacing:0.04em;border-bottom:1px solid #eee7db;">${r.name}</td></tr>`;
+      return `<tr><td colspan="${isMonths.length + 1}" style="padding:16px 12px 6px;font-weight:700;color:#82796a;font-size:12.5px;letter-spacing:0.04em;border-bottom:1px solid #eee7db;">${r.name}</td></tr>`;
     }
     const nameStyle = 'padding:11px 12px;text-align:left;border-bottom:1px solid #eee7db;' + (r.strong ? 'font-weight:700;' : 'color:#474238;padding-left:26px;');
-    const cellsHtml = Array.from({ length: 12 }, (_, i) => {
-      const stmt = getIncomeStatementMonth(i + 1);
+    const cellsHtml = isMonths.map(m => {
+      const stmt = getIncomeStatementMonth(m);
       const v = stmt ? stmt[r.key] : null;
       const valStyle = isCell + (r.hl ? 'font-weight:700;color:#8c491a;' : r.strong ? 'font-weight:700;color:#201e1d;' : 'color:#474238;');
       return `<td class="num" style="${valStyle}">${v == null ? '—' : fmt(v)}</td>`;
     }).join('');
     return `<tr><td style="${nameStyle}">${r.name}</td>${cellsHtml}</tr>`;
   }).join('');
-  document.getElementById('is-table-caption').textContent = label + ' 各月綜合損益表（依交易明細重新分類；銷售／管理費用切分與所得稅為概算，僅供內部參考）。';
+  document.getElementById('is-table-caption').textContent = isMonthView
+    ? label + ' ' + curMonthLabel + '綜合損益表（依交易明細重新分類；銷售／管理費用切分與所得稅為概算，僅供內部參考）。'
+    : label + ' 各月綜合損益表（依交易明細重新分類；銷售／管理費用切分與所得稅為概算，僅供內部參考）。';
 }
 
 function setMenuOpen(open) {
